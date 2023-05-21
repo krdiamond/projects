@@ -8,9 +8,9 @@
     </h1>
 
 
-    <h2>web developer, specializing in all things shopify and e-commerce</h2>
+     <h2>web developer, specializing in all things shopify and e-commerce</h2>
 
-    <div class="flex justify--center padding--40">
+    <div class="flex justify--center">
       <button class="blob-btn" @click="$emit('toggle-portfolio')">
         PORTFOLIO
         <span class="blob-btn__inner">
@@ -25,7 +25,7 @@
     </div>
 
 
-    <h3 class="flex justify--evenly block--sm">
+   <!-- <h3 class="flex justify--evenly block--sm">
       <span class="twinkles">｡･:</span>
       <a href="https://www.linkedin.com/in/kristinadiamond/" target="_blank" class="no-underline" aria-label="Navigate to Kristina Diamond's Linkedin">
         <img src="../assets/linkedin.svg" class="icon-link" title="Kristina Diamond's Linkedin">
@@ -45,7 +45,7 @@
         <img src="../assets/github.svg" class="icon-link" title="Kristina Diamond's Linkedin">
       </a>
       <span class="twinkles">｡</span>
-    </h3>
+    </h3>-->
 
     
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hide">
@@ -56,7 +56,7 @@
       <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
     </filter>
   </defs>
-</svg>
+</svg> 
     
 
 
