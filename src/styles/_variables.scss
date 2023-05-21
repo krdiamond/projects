@@ -1,0 +1,28 @@
+// ------------------------------------ FONTS ------------------------------------ //
+@font-face {
+    font-family: 'Archivo-Black';
+    src: url('../fonts/Archivo-Black.woff2') format('woff2'),
+         url('../fonts/Archivo-Black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Alata-Regular';
+    src: url('../fonts/Alata-Regular.woff2') format('woff2'),
+         url('../fonts/Alata-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// -------------------------------------- COLORS -------------------------------------- //
+
+$blue: #4200FF;
+
+
+// ------------------------------------ BREAKPOINTS ------------------------------------ //
+
+$break--min: 200px;
+$break--mbl: 380px;
+$break--tblt: 768px;
+$break--dsktp--lg: 1440px;

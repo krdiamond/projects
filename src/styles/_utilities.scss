@@ -1,0 +1,122 @@
+
+@import '_variables.scss'; 
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+// -------------------------------------- ANIMATIONS -------------------------------------- //
+
+.underline-animation:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift 1s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%2300FF00' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: 0 100%;
+    background-size: auto 6px;
+    background-repeat: repeat-x;
+    text-decoration: none;
+  }
+
+// -------------------------------------- FLEX -------------------------------------- //
+
+.flex {
+    display: flex;
+    &-col {
+        flex-direction: column;
+    }
+}
+
+.block {
+    &--sm {
+        @media screen and (min-width: 351px) {
+            display: block;
+        }
+    }
+}
+
+.justify {
+    &--evenly {
+        justify-content: space-evenly;
+    }
+    &--center {
+        justify-content: center;
+    }
+}
+
+// -------------------------------------- COLOR -------------------------------------- //
+
+.bg {
+    &--none {
+        background: none;
+    }
+    &--white {
+        background-color: white;
+    }
+}
+
+// -------------------------------------- SPACING -------------------------------------- //
+
+.right {
+    &--0 {
+        right: 0;
+    }
+}
+
+.top {
+    &--0 {
+        top: 0;
+    }
+}
+
+.padding {
+    &--20 {
+       padding: 20px; 
+    }
+    &--40 {
+        padding: 40px; 
+     }
+}
+
+.margin {
+    &-top {
+        &---5 {
+            margin-top: -5px;
+        }
+    }
+}
+
+// -------------------------------------- tbd -------------------------------------- //
+
+.hide {
+    display: none;
+}
+
+.position {
+    &--absolute {
+        position: absolute;
+    }
+}
+
+
+
+
+
+
+.border {
+    &--none {
+        border: none;
+    }
+}
+
+.space_x1 {
+    letter-spacing: 0.27em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: $blue;
+}
