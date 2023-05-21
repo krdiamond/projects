@@ -102,6 +102,11 @@ h3 {
   }
 }
 
+.icon-link:hover {
+  color: $green;
+  fill: $green;
+}
+
 .x1 {
   -webkit-animation: animateBubble 4s infinite;
   -moz-animation: animateBubble 4s infinite;
@@ -109,9 +114,9 @@ h3 {
 }
 
 .x2 {
-  -webkit-animation: animateBubble 5s infinite;
-  -moz-animation: animateBubble 5s infinite;
-  animation: animateBubble 5s infinite
+  -webkit-animation: animateBubble 5s ease 2s infinite alternate;
+  -moz-animation: animateBubble 5s ease 2s infinite alternate;
+  animation: animateBubble 5s ease 2s infinite alternate
 }
 
 .x3 {
@@ -135,9 +140,9 @@ h3 {
 
 @keyframes animateBubble {
   0% {
-      transform: translateY(0);
-      -webkit-transform: translateY(0px);
-      -moz-transform: translateY(0px)
+      transform: translateY(-3);
+      -webkit-transform: translateY(-3px);
+      -moz-transform: translateY(-3px)
   }
   50% {
       transform: translateY(-15px);
@@ -176,6 +181,9 @@ h3 {
 .twinkles {
   @media screen and (max-width: 350px) {
     display: none;
+  }
+  @media screen and (min-width: $break--tblt){
+    margin: 20px;
   }
 }
 

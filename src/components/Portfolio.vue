@@ -1,14 +1,14 @@
 <template>
   <div class="container position--absolute top--0 bg--white">
-    <button @click="$emit('toggle-portfolio')" class="position--absolute right--0 padding--20 bg--none border--none">        
+    <button @click="$emit('toggle-portfolio')" class="position--fixed right--30 padding--20 bg--none border--none">        
         <img src="../assets/x.svg"  title="Close Portfolio" width="30">
     </button>
     <div  v-for="project in projects"  :key="project.brand" class="">
-          <h3><a target="_blank" :href="project.brandURL"  class="underline-animation">{{project.brand}}</a></h3>
-          <h4>{{project.position}}</h4>
-          <p>{{project.details}}</p>
-          <h5 v-if="project.agencyURL"> While @ <a target="_blank" :href="project.agencyURL" class="underline-animation">{{project.agency}}</a>, {{project.launchDate}}</h5> 
-          <h5 v-else >While @ {{project.agency}}, {{project.launchDate}}</h5>
+        <h1><a target="_blank" :href="project.brandURL"  class="underline-animation">{{project.brand}}</a></h1>
+        <!-- <h4>{{project.position}}</h4>
+        <p>{{project.details}}</p>
+        <h5 v-if="project.agencyURL"> While @ <a target="_blank" :href="project.agencyURL" class="underline-animation">{{project.agency}}</a>, {{project.launchDate}}</h5> 
+        <h5 v-else >While @ {{project.agency}}, {{project.launchDate}}</h5> -->
     </div>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
       return {
         projects: [
           {
-            brand: 'Sleepme',
+            brand: 'sleepme',
             brandURL: 'https://sleep.me/',
             position: 'Front End Development',
             details: 'Shopify+, Vue, Headless, ReCharge, Shopify Scripts, Extend & Affirm',

@@ -20,11 +20,13 @@
     }
     @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
       margin-top: 60px;
+      padding: 20px;
       width: calc(400px + (600 - 400) * ((100vw - 768px) / (1440 - 768)));
       font-size: calc(18px + (34 - 18) * ((100vw - 768px) / (1440 - 768)));
     }
     @media screen and (min-width: $break--dsktp--lg){
       margin-top: 100px;
+      padding: 40px;
       width: calc(600px + (800 - 600) * ((100vw - 1440px) / (2000 - 1440)));
       font-size: calc(34px + (42 - 34) * ((100vw - 1440px) / (2000 - 1440)));
     }
@@ -36,7 +38,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      border-radius:30px;
+      border-radius:70px;
       border: 5px solid $blue;
       @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
         border: 6px solid $blue;
@@ -56,18 +58,18 @@
       height: 100%;
   
       transition: all 0.3s 0.2s;
-      border-radius:30px;
+      border-radius:70px;
     }
     
     &:hover {
       color: white;
-      border-radius:30px;
+      border-radius:70px;
       
       &:after {
         transition: all 0.3s;
         left: 0;
         top: 0;
-        border-radius:30px;
+        border-radius:70px;
       }
     }
     
@@ -79,7 +81,7 @@
       top: 0;
       width: 100%;
       height: 100%;
-      border-radius:30px;
+      border-radius:70px;
       background:white;
     }
     

@@ -61,6 +61,9 @@
     &--0 {
         right: 0;
     }
+    &--30 {
+        right: 30px;
+    }
 }
 
 .top {
@@ -96,8 +99,17 @@
     &--absolute {
         position: absolute;
     }
+    &--fixed {
+        position: fixed;
+    }
 }
 
+
+.text-align {
+    &--center {
+        text-align: center;
+    }
+}
 
 
 
