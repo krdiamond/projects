@@ -72,34 +72,105 @@ h3 {
     font-size: calc(150px + (180 - 150) * ((100vw - 1440px) / (2000 - 1440)));
   }
   .icon-link {
+    display: inline-block;
     width: 20px;
     height: 20px;
     font-size: 30px;
     @media screen and (min-width: $break--min) and (max-width: 350px) {
-      font-size: calc(30px + (50 - 30) * ((100vw - 200px) / (350 - 200)));
+      font-size: calc(30px + (40 - 30) * ((100vw - 200px) / (350 - 200)));
       width: calc(20px + (30 - 20) * ((100vw - 200px) / (350 - 200)));
       height: calc(20px + (30 - 20) * ((100vw - 200px) / (350 - 200)));
     }
     @media screen and (min-width: 351px) and (max-width: $break--tblt) {
-      padding: 10px;
-      font-size: calc(50px + (68 - 50) * ((100vw - 351px) / (768 - 351)));
-      height: calc(30px + (80 - 30) * ((100vw - 351px) / (768 - 351)));
-      width: calc(30px + (80 - 30) * ((100vw - 351px) / (768 - 351)));
+      margin: 10px;
+      font-size: calc(40px + (90 - 40) * ((100vw - 351px) / (768 - 351)));
+      height: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
+      width: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
     }
     @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-      padding: 10px;
-      font-size: calc(68px + (88 - 68) * ((100vw - 768px) / (1440 - 768)));
-      height: calc(80px + (120 - 80) * ((100vw - 768px) / (1440 - 768)));
-      width: calc(80px + (120 - 80) * ((100vw - 768px) / (1440 - 768)));
+      margin: 10px;
+      font-size: calc(90px + (160 - 90) * ((100vw - 768px) / (1440 - 768)));
+      height: calc(50px + (120 - 50) * ((100vw - 768px) / (1440 - 768)));
+      width: calc(50px + (120 - 50) * ((100vw - 768px) / (1440 - 768)));
     }
     @media screen and (min-width: $break--dsktp--lg){
       padding: 10px;
-      font-size: calc(88px + (108 - 88) * ((100vw - 1440px) / (2000 - 1440)));
+      font-size: calc(160px + (200 - 160) * ((100vw - 1440px) / (2000 - 1440)));
       height: calc(120px + (160 - 120) * ((100vw - 1440px) / (2000 - 1440)));
       width: calc(120px + (160 - 120) * ((100vw - 1440px) / (2000 - 1440)));
     }
   }
 }
+
+.x1 {
+  -webkit-animation: animateBubble 4s infinite;
+  -moz-animation: animateBubble 4s infinite;
+  animation: animateBubble 4s infinite;
+}
+
+.x2 {
+  -webkit-animation: animateBubble 5s infinite;
+  -moz-animation: animateBubble 5s infinite;
+  animation: animateBubble 5s infinite
+}
+
+.x3 {
+  -webkit-animation: animateBubblebig 6s infinite;
+  -moz-animation: animateBubblebig 6s infinite;
+  animation: animateBubblebig 6s infinite;
+}
+
+.x4 {
+  -webkit-animation: animateBubble 7s infinite;
+  -moz-animation: animateBubble 7s infinite;
+  animation: animateBubble 7s infinite;
+}
+
+.x5 {
+  -webkit-animation: animateBubblebig 8s infinite;
+  -moz-animation: animateBubblebig 8s infinite;
+  animation: animateBubblebig 8s infinite;
+}
+
+
+@keyframes animateBubble {
+  0% {
+      transform: translateY(0);
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px)
+  }
+  50% {
+      transform: translateY(-15px);
+      -webkit-transform: translateY(-15px);
+      -moz-transform: translateY(-15px)
+  }
+  to {
+      transform: translateY(0);
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px)
+  }
+}
+
+@keyframes animateBubblebig {
+  0% {
+      transform: translateY(0);
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px)
+  }
+
+  50% {
+      transform: translateY(25px);
+      -webkit-transform: translateY(25px);
+      -moz-transform: translateY(25px)
+  }
+
+  to {
+      transform: translateY(0);
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px)
+  }
+}
+
 
 
 .twinkles {
@@ -109,121 +180,3 @@ h3 {
 }
 
 
-.blob-btn {
-  $numOfBlobs: 4;
-  position: relative;
-  color: $blue;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  transition: color 0.5s;
-  cursor: pointer;
-  padding: 20px;
-  width: 240px;
-  margin: 24px;
-  @media screen and (min-width: $break--min) and (max-width: $break--tblt) {
-    width: calc(240px + (400 - 240) * ((100vw - 380px) / (768 - 351)));
-    font-size: calc(16px + (18 - 16) * ((100vw - 380px) / (768 - 351)));
-  }
-  @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-    margin-top: 60px;
-    width: calc(400px + (600 - 400) * ((100vw - 768px) / (1440 - 768)));
-    font-size: calc(18px + (34 - 18) * ((100vw - 768px) / (1440 - 768)));
-  }
-  @media screen and (min-width: $break--dsktp--lg){
-    margin-top: 100px;
-    width: calc(600px + (800 - 600) * ((100vw - 1440px) / (2000 - 1440)));
-    font-size: calc(34px + (42 - 34) * ((100vw - 1440px) / (2000 - 1440)));
-    
-  }
-  
-  &:before {
-    content: "";
-    z-index: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border: 5px solid $blue;
-    border-radius:30px;
-  }
-  
-  &:after {
-    content: "";
-    z-index: -2;
-    position: absolute;
-    left: 5px*1.5;
-    top: 5px*1.5;
-    width: 100%;
-    height: 100%;
-
-    transition: all 0.3s 0.2s;
-    border-radius:30px;
-  }
-  
-  &:hover {
-    color: white;
-    border-radius:30px;
-    
-    &:after {
-      transition: all 0.3s;
-      left: 0;
-      top: 0;
-      border-radius:30px;
-    }
-  }
-  
-  &__inner {
-    z-index: -1;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius:30px;
-    background:white;
-  }
-  
-  // additional container created, because in FF blobs are breaking overflow:hidden of element with svg gooey filter
-  &__blobs {
-    position: relative;
-    display: block;
-    height: 100%;
-    filter: url('#goo');
-  }
-  
-  &__blob {
-    position: absolute;
-    top: 5px;
-    width: 100% / $numOfBlobs;
-    height: 100%;
-    background: $blue;
-    border-radius: 100%;
-    transform: translate3d(0,150%,0) scale(1.7);
-    transition: transform 0.45s;
-    
-    @supports(filter: url('#goo')) {
-      transform: translate3d(0,150%,0) scale(1.4);
-    }
-    
-    @for $i from 1 through $numOfBlobs {
-      &:nth-child(#{$i}) {
-        left: ($i - 1) * (120% / $numOfBlobs);
-        transition-delay: ($i - 1) * 0.08s;
-      }
-    }
-    
-    .blob-btn:hover & {
-      transform: translateZ(0) scale(1.7);
-      
-      @supports(filter: url('#goo')) {
-        transform: translateZ(0) scale(1.4);
-      }
-    }
-  }
-  
-}

@@ -24,40 +24,28 @@
       </button>
     </div>
 
-
-   <!-- <h3 class="flex justify--evenly block--sm">
+   <h3 class="flex justify--evenly block--sm">
       <span class="twinkles">｡･:</span>
       <a href="https://www.linkedin.com/in/kristinadiamond/" target="_blank" class="no-underline" aria-label="Navigate to Kristina Diamond's Linkedin">
-        <img src="../assets/linkedin.svg" class="icon-link" title="Kristina Diamond's Linkedin">
+        <img src="../assets/linkedin.svg" class="icon-link x1" title="Kristina Diamond's Linkedin">
       </a>
-      <span class="twinkles">*˚✧｡☀︎⋆⁺₊⋆</span>
-      <a href="KristinaDiamondResume.pdf" download target="_blank" class="no-underline icon-link" aria-label="View Kristina Diamond's Resume">
-      ☾ 
+      <span class="twinkles">*˚✧｡</span>
+        <!-- <span class="icon-link x5">☀︎</span> -->
+        <span class="twinkles">☀︎</span>
+        <span>⋆⁺₊⋆</span>
+      <a href="KristinaDiamondResume.pdf" download target="_blank" class="no-underline icon-link x2" aria-label="View Kristina Diamond's Resume">
+        <span> ☾ </span> 
       </a>
-      <span class="twinkles">⋆⁺₊⋆</span>
-      <span class="twinkles">✧</span>
-      <span class="twinkles">｡･:</span>
-      <a href="https://mail.google.com/mail/?view=cm&to=krdiamond@gmail.com"  target="_blank" class="no-underline icon-link" aria-label="Write an Email to Kristina Diamond, This will open a new message in gmail">
+      <span class="twinkles">⋆⁺₊⋆✧｡･:</span>
+      <a href="https://mail.google.com/mail/?view=cm&to=krdiamond@gmail.com"  target="_blank" class="no-underline icon-link x3" aria-label="Write an Email to Kristina Diamond, This will open a new message in gmail">
         ☁︎ 
       </a> 
       <span class="twinkles">˚:</span>
       <a href="https://github.com/krdiamond" target="_blank" class="no-underline" aria-label="View Kristina Diamond's Github">
-        <img src="../assets/github.svg" class="icon-link" title="Kristina Diamond's Linkedin">
+        <img src="../assets/github.svg" class="icon-link x4" title="Kristina Diamond's Linkedin">
       </a>
       <span class="twinkles">｡</span>
-    </h3>-->
-
-    
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hide">
-  <defs>
-    <filter id="goo">
-      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-      <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-    </filter>
-  </defs>
-</svg> 
-    
+    </h3>
 
 
   </div>
