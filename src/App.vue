@@ -1,5 +1,5 @@
 <template>
-  <div class="main-border">
+  <div class="main-border position--fixed">
     <Home 
       @toggle-portfolio="togglePortfolio()"
       />
@@ -23,7 +23,7 @@ export default {
   },
   data() {
       return {
-        portfolio: true,
+        portfolio: false,
       }
   },
   methods: {

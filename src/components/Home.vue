@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="home container margin--20">
       <header>
           <h1 class="flex flex-col">
               <span>KRISTINA</span>

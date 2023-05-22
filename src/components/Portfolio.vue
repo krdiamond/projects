@@ -3,7 +3,7 @@
     <button @click="$emit('toggle-portfolio')" class="position--fixed right--40 top--40 bg--none border--none">        
         <img src="../assets/x.svg"  title="Close Portfolio" width="30">
     </button>
-    <div  v-for="project in projects"  :key="project.brand" class="padding-bottom--20">
+    <div  v-for="project in projects"  :key="project.brand" class="padding-bottom--20 min-width--200">
         <h2><a target="_blank" :href="project.brandURL"  class="underline-animation">{{project.brand}}</a></h2>
         <h3>{{project.position}}</h3>
         <p>{{project.details}}</p>
@@ -19,6 +19,14 @@ export default {
   data() {
       return {
         projects: [
+          {
+            brand: 'ossa new york',
+            brandURL: 'https://www.ossanewyork.com/',
+            position: 'front end development',
+            details: 'shopify',
+            agency: 'owOw studio',
+            launchDate: 'coming soon'
+          },
           {
             brand: 'sleepme',
             brandURL: 'https://sleep.me/',
