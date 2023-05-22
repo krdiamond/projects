@@ -1,14 +1,14 @@
-<template>
-  <div class="container position--absolute top--0 bg--white">
-    <button @click="$emit('toggle-portfolio')" class="position--fixed right--30 padding--20 bg--none border--none">        
+<template> 
+  <div class="portfolio container position--absolute text-align--left top--0 bg--white padding--20">
+    <button @click="$emit('toggle-portfolio')" class="position--fixed right--40 top--40 bg--none border--none">        
         <img src="../assets/x.svg"  title="Close Portfolio" width="30">
     </button>
-    <div  v-for="project in projects"  :key="project.brand" class="">
-        <h1><a target="_blank" :href="project.brandURL"  class="underline-animation">{{project.brand}}</a></h1>
-        <!-- <h4>{{project.position}}</h4>
+    <div  v-for="project in projects"  :key="project.brand" class="padding-bottom--20">
+        <h2><a target="_blank" :href="project.brandURL"  class="underline-animation">{{project.brand}}</a></h2>
+        <h3>{{project.position}}</h3>
         <p>{{project.details}}</p>
         <h5 v-if="project.agencyURL"> While @ <a target="_blank" :href="project.agencyURL" class="underline-animation">{{project.agency}}</a>, {{project.launchDate}}</h5> 
-        <h5 v-else >While @ {{project.agency}}, {{project.launchDate}}</h5> -->
+        <h5 v-else >While @ {{project.agency}}, {{project.launchDate}}</h5>
     </div>
   </div>
 </template>
@@ -22,14 +22,14 @@ export default {
           {
             brand: 'sleepme',
             brandURL: 'https://sleep.me/',
-            position: 'Front End Development',
+            position: 'front end development',
             details: 'Shopify+, Vue, Headless, ReCharge, Shopify Scripts, Extend & Affirm',
             agency: 'Sleepme',
             agencyURL: 'https://sleep.me/',
             launchDate: 'Launch Sept 2022 & Ongoing'
           },
           {
-            brand: 'Chilisleep',
+            brand: 'chilisleep',
             brandURL: 'https://chilisleep.com.au/',
             position: 'Front End Development',
             details: 'Shopify+, Vue, Shopify Scripts, Clyde & Affirm',

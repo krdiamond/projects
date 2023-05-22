@@ -41,7 +41,7 @@ h1 {
   }
 }
 
-h2 {
+p {
   font-family: 'Alata-Regular', Arial, sans-serif;
   font-size: 8px;
   @media screen and (min-width: $break--min) and (max-width: $break--tblt) {
@@ -55,8 +55,7 @@ h2 {
   }
 }
 
-h3 {
-  font-family: 'Alata-Regular', Arial, sans-serif;
+.icons {
   font-size: 55px;
   margin: 0;
   @media screen and (min-width: 351px) and (max-width: $break--tblt) {

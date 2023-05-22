@@ -1,0 +1,63 @@
+@import '_variables.scss'; 
+
+
+.portfolio {
+    h2 {
+        font-family: 'Archivo-Black', Arial, sans-serif;
+        line-height: 1;
+        font-size: 34px;
+        // @media screen and (min-width: $break--min) and (max-width: $break--tblt) {
+        //     font-size: calc(18px + (99 - 18) * ((100vw - 200px) / (768 - 200)));
+        // }
+        // @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+        //     padding: 20px;
+        //     font-size: calc(95px + (191 - 95) * ((100vw - 768px) / (1440 - 768)));
+        // }
+        // @media screen and (min-width: $break--dsktp--lg){
+        //     padding: 20px;
+        //     font-size: calc(191px + (271 - 191) * ((100vw - 1440px) / (2000 - 1440)));
+        // }
+    }
+    
+    h3 {
+        font-family: 'Alata-Regular', Arial, sans-serif;
+        line-height: 1;
+        font-size: 22px;
+        padding-bottom: 5px;
+        // @media screen and (min-width: $break--min) and (max-width: $break--tblt) {
+        //     font-size: calc(8px + (40 - 8) * ((100vw - 200px) / (768 - 200)));
+        // }
+        // @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+        //     font-size: calc(40px + (77 - 40) * ((100vw - 768px) / (1440 - 768)));
+        // }
+        // @media screen and (min-width: $break--dsktp--lg){
+        //     font-size: calc(77px + (108 - 77) * ((100vw - 1440px) / (2000 - 1440)));
+        // }
+      }
+
+      p {
+        font-family: degular, sans-serif;
+        line-height: 1;
+        font-size: 12px;
+        padding-bottom: 5px;
+        // @media screen and (min-width: $break--min) and (max-width: $break--tblt) {
+        //     font-size: calc(8px + (40 - 8) * ((100vw - 200px) / (768 - 200)));
+        // }
+        // @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+        //     font-size: calc(40px + (77 - 40) * ((100vw - 768px) / (1440 - 768)));
+        // }
+        // @media screen and (min-width: $break--dsktp--lg){
+        //     font-size: calc(77px + (108 - 77) * ((100vw - 1440px) / (2000 - 1440)));
+        // }
+      }
+
+      h5 {
+        font-family: degular, sans-serif;
+        font-size: 10px;
+        font-style: italic;
+        font-weight: 200;
+      }
+}
+
+
+
