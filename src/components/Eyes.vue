@@ -1,6 +1,6 @@
 <template>
 
-    <div class="eyes inline-block">
+    <div class="eyes inline-block padding--20">
         <div class="flex">
             <div class="eye left">
                 <div class="pupil" :style="styles"></div>
