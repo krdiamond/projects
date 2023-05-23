@@ -29,13 +29,13 @@
                     <path  d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145zM41.4,508.1H-8.5V348.4h49.9V508.1zM15.1,328.4h-0.4c-18.1,0-29.8-12.2-29.8-27.7c0-15.8,12.1-27.7,30.5-27.7c18.4,0,29.7,11.9,30.1,27.7C45.6,316.1,33.9,328.4,15.1,328.4zM241,508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4c-14.9,0-23.2,10-27,19.6c-1.4,3.4-1.2,8.2-1.2,13.1v86.3H71.8c0,0,0.7-146.4,0-159.7h56.1v25.1c3.3-11,21.2-26.6,49.8-26.6c35.5,0,63.3,23,63.3,72.4V508.1z"/>
                 </svg>
             </a>
-            <span class="twinkles">*˚✧｡</span>
-            <span class="twinkles">☀︎</span> <!-- put another link here -->
-            <span class="twinkles">⋆⁺₊⋆</span>
+            <span class="twinkles">*˚✧｡☀︎⋆⁺₊⋆</span>
             <a href="KristinaDiamondResume.pdf" download target="_blank" class="no-underline icon-link x2" aria-label="View Kristina Diamond's Resume">
                 <span> ☾ </span> 
             </a>
-            <span class="twinkles">⋆⁺₊⋆✧｡･:</span>
+            <span class="twinkles">⋆⁺₊</span>
+            <Eyes class="no-underline"/>
+            <span class="twinkles">⋆✧｡･:</span>
             <a href="https://mail.google.com/mail/?view=cm&to=krdiamond@gmail.com"  target="_blank" class="no-underline icon-link x3" aria-label="Write an Email to Kristina Diamond, This will open a new message in gmail">
                 <span> ☁︎ </span> 
             </a> 
@@ -52,7 +52,14 @@
 </template>
 
 <script>
+
+import Eyes from '../components/Eyes.vue'
+
+
 export default {
   name: 'Home',
+  components: {
+    Eyes,
+  },
 }
 </script>

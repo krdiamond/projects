@@ -1,0 +1,86 @@
+@import '../styles/_variables.scss'; 
+
+.eyes {
+
+  
+    .eye {
+      display: none;
+      background: white;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 30px;
+      height: 30px;
+      @media screen and (min-width: 351px) and (max-width: $break--tblt) {
+        display: block;
+        border: 3px solid $blue;
+        height: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
+        width: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
+      }
+      @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+        display: block;
+        border: 5px solid $blue;
+        height: calc(50px + (80 - 50) * ((100vw - 768px) / (1440 - 768)));
+        width: calc(50px + (80 - 50) * ((100vw - 768px) / (1440 - 768)));
+      }
+      @media screen and (min-width: $break--dsktp--lg) {
+        display: block;
+        border: 8px solid $blue;
+        height: calc(80px + (160 - 80) * ((100vw - 1440px) / (2000 - 1440)));
+        width: calc(80px + (160 - 80) * ((100vw - 1440px) / (2000 - 1440)));
+      }
+
+      
+      .pupil {
+        background: $blue;
+        border-radius: 50%;
+        position: relative;
+        transform: translate(50%, 50%);
+        transition-property: left, top;
+        transition-duration: .25s;
+        transition-property: none;
+        width: 15px;
+        height: 15px;
+        @media screen and (min-width: 351px) and (max-width: $break--tblt) {
+          height: calc(15px + (30 - 15) * ((100vw - 351px) / (768 - 351)));
+          width: calc(15px + (30 - 15) * ((100vw - 351px) / (768 - 351)));
+        }
+        @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+          height: calc(30px + (40 - 30) * ((100vw - 768px) / (1440 - 768)));
+          width: calc(30px + (40 - 30) * ((100vw - 768px) / (1440 - 768)));
+        }
+        @media screen and (min-width: $break--dsktp--lg){
+          height: calc(40px + (80 - 40) * ((100vw - 1440px) / (2000 - 1440)));
+          width: calc(40px + (80 - 40) * ((100vw - 1440px) / (2000 - 1440)));
+        }
+        
+        &::after {
+          content: "";
+          background: white;
+          border-radius: 50%;
+          position: absolute;
+          height: 5px;
+          width: 5px;
+          top: 3px;
+          right: 3px;
+          @media screen and (min-width: 351px) and (max-width: $break--tblt) {
+            height: calc(5px + (10 - 5) * ((100vw - 351px) / (768 - 351)));
+            width: calc(5px + (10 - 5) * ((100vw - 351px) / (768 - 351)));
+            top: calc(3px + (6 - 3) * ((100vw - 351px) / (768 - 351)));
+            right: calc(3px + (6 - 3) * ((100vw - 351px) / (768 - 351)));
+          }
+          @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+            height: calc(10px + (12 - 10) * ((100vw - 768px) / (1440 - 768)));
+            width: calc(10px + (12 - 10) * ((100vw - 768px) / (1440 - 768)));
+            top: calc(6px + (8 - 6) *  ((100vw - 768px) / (1440 - 768)));
+            right: calc(6px + (8 - 6) * ((100vw - 768px) / (1440 - 768)));
+          }
+          @media screen and (min-width: $break--dsktp--lg){
+            height: calc(12px + (24 - 12) * ((100vw - 1440px) / (2000 - 1440)));
+            width: calc(12px + (24 - 12) * ((100vw - 1440px) / (2000 - 1440)));
+            top: calc(6px + (16 - 6) * ((100vw - 1440px) / (2000 - 1440)));
+            right: calc(6px + (16 - 6) * ((100vw - 1440px) / (2000 - 1440)));
+          }
+        }
+      }
+    }
+}

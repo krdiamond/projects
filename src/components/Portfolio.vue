@@ -1,5 +1,5 @@
 <template> 
-  <div class="portfolio container position--absolute text-align--left top--0 bg--white padding--20">
+  <div class="portfolio container position--absolute z-index--1 text-align--left top--0 bg--white padding--20">
     <button @click="$emit('toggle-portfolio')" class="position--fixed right--40 top--40 bg--none border--none">        
         <img src="../assets/x.svg"  title="Close Portfolio" width="30">
     </button>
