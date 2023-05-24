@@ -80,6 +80,8 @@ export default {
       });
     },
     handleResize() {
+      this.updateOutputRange();
+      
       this.input.mouseX.end = window.innerWidth;
       this.input.mouseX.range = this.input.mouseX.end - this.input.mouseX.start;
 
