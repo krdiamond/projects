@@ -7,6 +7,7 @@
       v-if="portfolio" 
       @toggle-portfolio="togglePortfolio()"
     />
+    <Eyes/>
   </div>
 </template>
 
@@ -15,15 +16,16 @@
 import Home from './components/Home.vue'
 import Portfolio from './components/Portfolio.vue'
 
+
 export default {
   name: 'App',
   components: {
     Home,
-    Portfolio
+    Portfolio,
   },
   data() {
       return {
-        portfolio: false,
+        portfolio: true,
       }
   },
   methods: {

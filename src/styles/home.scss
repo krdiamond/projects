@@ -35,53 +35,66 @@
         }
       }
       
-      .icons {
-        font-size: 55px;
-        margin: 0;
+      .twinkles {
+        @media screen and (max-width: 350px) {
+          display: none;
+        }
         @media screen and (min-width: 351px) and (max-width: $break--tblt) {
-          padding: 20px;
           font-size: calc(55px + (68 - 55) * ((100vw - 350px) / (768 - 350)));
         }
         @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-          padding: 20px;
           font-size: calc(68px + (150 - 68) * ((100vw - 768px) / (1440 - 768)));
         }
         @media screen and (min-width: $break--dsktp--lg){
-          padding: 20px;
           font-size: calc(150px + (180 - 150) * ((100vw - 1440px) / (2000 - 1440)));
         }
-        .icon-link {
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          font-size: 30px;
-          @media screen and (min-width: $break--min) and (max-width: 350px) {
-            font-size: calc(30px + (40 - 30) * ((100vw - 200px) / (350 - 200)));
-            width: calc(20px + (30 - 20) * ((100vw - 200px) / (350 - 200)));
-            height: calc(20px + (30 - 20) * ((100vw - 200px) / (350 - 200)));
-          }
-          @media screen and (min-width: 351px) and (max-width: $break--tblt) {
-            margin: 10px;
-            font-size: calc(40px + (90 - 40) * ((100vw - 351px) / (768 - 351)));
-            height: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
-            width: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
-          }
-          @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-            margin: 10px;
-            font-size: calc(90px + (160 - 90) * ((100vw - 768px) / (1440 - 768)));
-            height: calc(50px + (120 - 50) * ((100vw - 768px) / (1440 - 768)));
-            width: calc(50px + (120 - 50) * ((100vw - 768px) / (1440 - 768)));
-          }
-          @media screen and (min-width: $break--dsktp--lg){
-            padding: 10px;
-            font-size: calc(160px + (200 - 160) * ((100vw - 1440px) / (2000 - 1440)));
-            height: calc(120px + (160 - 120) * ((100vw - 1440px) / (2000 - 1440)));
-            width: calc(120px + (160 - 120) * ((100vw - 1440px) / (2000 - 1440)));
-          }
+      }
+
+      .icon-link-svg {
+        width: 20px;
+        height: 20px;
+        @media screen and (min-width: $break--min) and (max-width: 350px) {
+          width: calc(20px + (30 - 20) * ((100vw - 200px) / (350 - 200)));
+          height: calc(20px + (30 - 20) * ((100vw - 200px) / (350 - 200)));
+        }
+        @media screen and (min-width: 351px) and (max-width: $break--tblt) {
+          margin: 10px;
+          height: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
+          width: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
+        }
+        @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+          margin: 10px;
+          height: calc(50px + (120 - 50) * ((100vw - 768px) / (1440 - 768)));
+          width: calc(50px + (120 - 50) * ((100vw - 768px) / (1440 - 768)));
+        }
+        @media screen and (min-width: $break--dsktp--lg){
+          margin: 10px;
+          height: calc(120px + (160 - 120) * ((100vw - 1440px) / (2000 - 1440)));
+          width: calc(120px + (160 - 120) * ((100vw - 1440px) / (2000 - 1440)));
+        }
+      }
+
+      .icon-link {
+        display: inline-block;
+        font-size: 30px;
+        @media screen and (min-width: $break--min) and (max-width: 350px) {
+          font-size: calc(30px + (40 - 30) * ((100vw - 200px) / (350 - 200)));
+        }
+        @media screen and (min-width: 351px) and (max-width: $break--tblt) {
+          padding: 10px;
+          font-size: calc(40px + (90 - 40) * ((100vw - 351px) / (768 - 351)));
+        }
+        @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+          padding: 10px;
+          font-size: calc(90px + (160 - 90) * ((100vw - 768px) / (1440 - 768)));
+        }
+        @media screen and (min-width: $break--dsktp--lg){
+          padding: 10px;
+          font-size: calc(160px + (200 - 160) * ((100vw - 1440px) / (2000 - 1440)));
         }
       }
       
-      .icon-link:hover {
+      .icon-link:hover, .icon-link-svg:hover {
         color: $green;
         fill: $green;
       }
@@ -154,18 +167,5 @@
             -moz-transform: translateY(0px)
         }
       }
-      
-      
-      
-      .twinkles {
-        @media screen and (max-width: 350px) {
-          display: none;
-        }
-        @media screen and (min-width: $break--tblt){
-          margin: 20px;
-        }
-      }
-      
-      
       
 }
