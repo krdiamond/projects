@@ -54,7 +54,6 @@
         width: 20px;
         height: 20px;
         @media screen and (min-width: $break--min) and (max-width: 350px) {
-          margin: 10px;
           width: calc(20px + (30 - 20) * ((100vw - 200px) / (350 - 200)));
           height: calc(20px + (30 - 20) * ((100vw - 200px) / (350 - 200)));
         }
@@ -79,7 +78,6 @@
         display: inline-block;
         font-size: 30px;
         @media screen and (min-width: $break--min) and (max-width: 350px) {
-          padding: 10px;
           font-size: calc(30px + (40 - 30) * ((100vw - 200px) / (350 - 200)));
         }
         @media screen and (min-width: 351px) and (max-width: $break--tblt) {

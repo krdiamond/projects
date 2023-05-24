@@ -22,7 +22,7 @@
               </button>
           </div>
 
-        <div class="flex justify--evenly align--center block--sm padding--20">
+        <div class="flex justify--evenly align--center block--sm padding--10">
             <span class="twinkles">｡･:</span>
 
             <a href="https://www.linkedin.com/in/kristinadiamond/" target="_blank" aria-label="Navigate to Kristina Diamond's Linkedin">

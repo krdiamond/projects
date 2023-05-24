@@ -1,82 +1,201 @@
 @import '../styles/_variables.scss'; 
 
+
+
 .eyes {
-    @media screen and (max-width: 350px) {
-      display: none;
+  display: none;
+  @media screen and (min-width: 350px) {
+    display: inline-block;
+  }
+  .eye {
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    @media screen and (min-width: 351px) and (max-width: $break--tblt) {
+      border: 3px solid $blue;
+      height: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
+      width: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
     }
-    .eye {
-      background: white;
+    @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+      border: 5px solid $blue;
+      height: calc(50px + (100 - 50) * ((100vw - 768px) / (1440 - 768)));
+      width: calc(50px + (100 - 50) * ((100vw - 768px) / (1440 - 768)));
+    }
+    @media screen and (min-width: $break--dsktp--lg) {
+      border: 8px solid $blue;
+      height: calc(100px + (160 - 100) * ((100vw - 1440px) / (2000 - 1440)));
+      width: calc(100px + (160 - 100) * ((100vw - 1440px) / (2000 - 1440)));
+    }
+
+    .pupil {
+      background-color: $blue;
       border-radius: 50%;
-      overflow: hidden;
-      width: 30px;
-      height: 30px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
       @media screen and (min-width: 351px) and (max-width: $break--tblt) {
-        border: 3px solid $blue;
-        height: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
-        width: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
+        margin-left: calc((-10px) + ((-12) - (-10)) * ((100vw - 351px) / (768 - 351)));
+        margin-top: calc((-8px) + ((-13) - (-8)) * ((100vw - 351px) / (768 - 351)));
+        height: calc(15px + (25 - 15) * ((100vw - 351px) / (768 - 351)));
+        width: calc(15px + (25 - 15) * ((100vw - 351px) / (768 - 351)));
       }
       @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-        border: 5px solid $blue;
-        height: calc(50px + (80 - 50) * ((100vw - 768px) / (1440 - 768)));
-        width: calc(50px + (80 - 50) * ((100vw - 768px) / (1440 - 768)));
+        margin-left: calc((-12px) + ((-24) - (-12)) * ((100vw - 768px) / (1440 - 768)));
+        margin-top: calc((-13px) + ((-24) - (-13)) * ((100vw - 768px) / (1440 - 768)));
+        height: calc(25px + (50 - 25) * ((100vw - 768px) / (1440 - 768)));
+        width: calc(25px + (50 - 25) * ((100vw - 768px) / (1440 - 768)));
       }
-      @media screen and (min-width: $break--dsktp--lg) {
-        border: 8px solid $blue;
-        height: calc(80px + (160 - 80) * ((100vw - 1440px) / (2000 - 1440)));
-        width: calc(80px + (160 - 80) * ((100vw - 1440px) / (2000 - 1440)));
+      @media screen and (min-width: $break--dsktp--lg){
+        margin-left: calc((-24px) + ((-40) - (-24)) * ((100vw - 1440px) / (2000 - 1440)));
+        margin-top: calc((-24px) + ((-40) - (-24)) * ((100vw - 1440px) / (2000 - 1440)));
+        height: calc(50px + (80 - 50) * ((100vw - 1440px) / (2000 - 1440)));
+        width: calc(50px + (80 - 50) * ((100vw - 1440px) / (2000 - 1440)));
       }
-
-      .pupil {
-        background: $blue;
-        border-radius: 50%;
-        position: relative;
-        transform: translate(50%, 50%);
-        transition-property: left, top;
-        transition-duration: .25s;
-        transition-property: none;
-        width: 15px;
-        height: 15px;
-        @media screen and (min-width: 351px) and (max-width: $break--tblt) {
-          height: calc(15px + (30 - 15) * ((100vw - 351px) / (768 - 351)));
-          width: calc(15px + (30 - 15) * ((100vw - 351px) / (768 - 351)));
-        }
-        @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-          height: calc(30px + (40 - 30) * ((100vw - 768px) / (1440 - 768)));
-          width: calc(30px + (40 - 30) * ((100vw - 768px) / (1440 - 768)));
-        }
-        @media screen and (min-width: $break--dsktp--lg){
-          height: calc(40px + (80 - 40) * ((100vw - 1440px) / (2000 - 1440)));
-          width: calc(40px + (80 - 40) * ((100vw - 1440px) / (2000 - 1440)));
-        }
-        
-        &::after {
-          content: "";
-          background: white;
-          border-radius: 50%;
-          position: absolute;
-          height: 5px;
-          width: 5px;
-          top: 3px;
-          right: 3px;
-          @media screen and (min-width: 351px) and (max-width: $break--tblt) {
-            height: calc(5px + (10 - 5) * ((100vw - 351px) / (768 - 351)));
-            width: calc(5px + (10 - 5) * ((100vw - 351px) / (768 - 351)));
-            top: calc(3px + (6 - 3) * ((100vw - 351px) / (768 - 351)));
-            right: calc(3px + (6 - 3) * ((100vw - 351px) / (768 - 351)));
-          }
-          @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-            height: calc(10px + (12 - 10) * ((100vw - 768px) / (1440 - 768)));
-            width: calc(10px + (12 - 10) * ((100vw - 768px) / (1440 - 768)));
-            top: calc(6px + (8 - 6) *  ((100vw - 768px) / (1440 - 768)));
-            right: calc(6px + (8 - 6) * ((100vw - 768px) / (1440 - 768)));
-          }
-          @media screen and (min-width: $break--dsktp--lg){
-            height: calc(12px + (24 - 12) * ((100vw - 1440px) / (2000 - 1440)));
-            width: calc(12px + (24 - 12) * ((100vw - 1440px) / (2000 - 1440)));
-            top: calc(6px + (16 - 6) * ((100vw - 1440px) / (2000 - 1440)));
-            right: calc(6px + (16 - 6) * ((100vw - 1440px) / (2000 - 1440)));
-          }
-        }
+      
+      &::after {
+          // content: "";
+          // background: white;
+          // border-radius: 50%;
+          // position: absolute;
+          // height: 10px;
+          // width: 10px;
+          // top: 10px;
+          // right: 10px;
+        // @media screen and (min-width: 351px) and (max-width: $break--tblt) {
+        //   height: calc(5px + (10 - 5) * ((100vw - 351px) / (768 - 351)));
+        //   width: calc(5px + (10 - 5) * ((100vw - 351px) / (768 - 351)));
+        //   top: calc(3px + (6 - 3) * ((100vw - 351px) / (768 - 351)));
+        //   right: calc(3px + (6 - 3) * ((100vw - 351px) / (768 - 351)));
+        // }
+        // @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+        //   height: calc(10px + (12 - 10) * ((100vw - 768px) / (1440 - 768)));
+        //   width: calc(10px + (12 - 10) * ((100vw - 768px) / (1440 - 768)));
+        //   top: calc(6px + (8 - 6) *  ((100vw - 768px) / (1440 - 768)));
+        //   right: calc(6px + (8 - 6) * ((100vw - 768px) / (1440 - 768)));
+        // }
+        // @media screen and (min-width: $break--dsktp--lg){
+        //   height: calc(12px + (24 - 12) * ((100vw - 1440px) / (2000 - 1440)));
+        //   width: calc(12px + (24 - 12) * ((100vw - 1440px) / (2000 - 1440)));
+        //   top: calc(6px + (16 - 6) * ((100vw - 1440px) / (2000 - 1440)));
+        //   right: calc(6px + (16 - 6) * ((100vw - 1440px) / (2000 - 1440)));
+        // }
       }
     }
+  }
 }
+
+
+
+
+// .eye {
+  // width: 200px;
+  // height: 200px;
+  // border-radius: 50%;
+  // overflow: hidden;
+  // border: 3px solid black;
+  // position: relative;
+// }
+
+// .pupil {
+  // background-color: black;
+  // width: 50px;
+  // height: 50px;
+  // border-radius: 50%;
+  // position: absolute;
+  // left: 50%;
+  // top: 50%;
+  // margin-left: -25px;
+  // margin-top: -25px;
+  // &::after {
+  //   content: "";
+  //   background: white;
+  //   border-radius: 50%;
+  //   position: absolute;
+  //   height: 10px;
+  //   width: 10px;
+  //   top: 10px;
+  //   right: 10px;
+  // }
+// }
+
+
+// .eyes {
+//   @media screen and (max-width: 350px) {
+//     display: none;
+//   }
+//   .eye {
+//     background: white;
+//     border-radius: 50%;
+//     overflow: hidden;
+//     width: 30px;
+//     height: 30px;
+//     @media screen and (min-width: 351px) and (max-width: $break--tblt) {
+//       border: 3px solid $blue;
+//       height: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
+//       width: calc(30px + (50 - 30) * ((100vw - 351px) / (768 - 351)));
+//     }
+//     @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+//       border: 5px solid $blue;
+//       height: calc(50px + (80 - 50) * ((100vw - 768px) / (1440 - 768)));
+//       width: calc(50px + (80 - 50) * ((100vw - 768px) / (1440 - 768)));
+//     }
+//     @media screen and (min-width: $break--dsktp--lg) {
+//       border: 8px solid $blue;
+//       height: calc(80px + (160 - 80) * ((100vw - 1440px) / (2000 - 1440)));
+//       width: calc(80px + (160 - 80) * ((100vw - 1440px) / (2000 - 1440)));
+//     }
+
+//     .pupil {
+//       background: $blue;
+//       border-radius: 50%;
+//       position: relative;
+//       transform: translate(50%, 50%);
+//       transition-property: left, top;
+//       transition-duration: .25s;
+//       transition-property: none;
+//       width: 15px;
+//       height: 15px;
+//       @media screen and (min-width: 351px) and (max-width: $break--tblt) {
+//         height: calc(15px + (30 - 15) * ((100vw - 351px) / (768 - 351)));
+//         width: calc(15px + (30 - 15) * ((100vw - 351px) / (768 - 351)));
+//       }
+//       @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+//         height: calc(30px + (40 - 30) * ((100vw - 768px) / (1440 - 768)));
+//         width: calc(30px + (40 - 30) * ((100vw - 768px) / (1440 - 768)));
+//       }
+//       @media screen and (min-width: $break--dsktp--lg){
+//         height: calc(40px + (80 - 40) * ((100vw - 1440px) / (2000 - 1440)));
+//         width: calc(40px + (80 - 40) * ((100vw - 1440px) / (2000 - 1440)));
+//       }
+      
+//       &::after {
+//         content: "";
+//         background: white;
+//         border-radius: 50%;
+//         position: absolute;
+//         height: 5px;
+//         width: 5px;
+//         top: 3px;
+//         right: 3px;
+//         @media screen and (min-width: 351px) and (max-width: $break--tblt) {
+//           height: calc(5px + (10 - 5) * ((100vw - 351px) / (768 - 351)));
+//           width: calc(5px + (10 - 5) * ((100vw - 351px) / (768 - 351)));
+//           top: calc(3px + (6 - 3) * ((100vw - 351px) / (768 - 351)));
+//           right: calc(3px + (6 - 3) * ((100vw - 351px) / (768 - 351)));
+//         }
+//         @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+//           height: calc(10px + (12 - 10) * ((100vw - 768px) / (1440 - 768)));
+//           width: calc(10px + (12 - 10) * ((100vw - 768px) / (1440 - 768)));
+//           top: calc(6px + (8 - 6) *  ((100vw - 768px) / (1440 - 768)));
+//           right: calc(6px + (8 - 6) * ((100vw - 768px) / (1440 - 768)));
+//         }
+//         @media screen and (min-width: $break--dsktp--lg){
+//           height: calc(12px + (24 - 12) * ((100vw - 1440px) / (2000 - 1440)));
+//           width: calc(12px + (24 - 12) * ((100vw - 1440px) / (2000 - 1440)));
+//           top: calc(6px + (16 - 6) * ((100vw - 1440px) / (2000 - 1440)));
+//           right: calc(6px + (16 - 6) * ((100vw - 1440px) / (2000 - 1440)));
+//         }
+//       }
+//     }
+//   }
+// }

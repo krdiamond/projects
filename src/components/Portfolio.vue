@@ -4,11 +4,15 @@
         <img src="../assets/x.svg"  title="Close Portfolio" width="30">
     </button>
     <div  v-for="project in projects"  :key="project.brand" class="padding-bottom--20 min-width--200">
-        <h2><a target="_blank" :href="project.brandURL"  class="underline-animation">{{project.brand}}</a></h2>
+        <h2 v-if="project.brandURL" ><a target="_blank" :href="project.brandURL"  class="underline-animation">{{project.brand}}</a></h2>
+        <h2 v-else >{{project.brand}}</h2>
         <h3>{{project.position}}</h3>
         <p>{{project.details}}</p>
-        <h5 v-if="project.agencyURL"> While @ <a target="_blank" :href="project.agencyURL" class="underline-animation">{{project.agency}}</a>, {{project.launchDate}}</h5> 
-        <h5 v-else >While @ {{project.agency}}, {{project.launchDate}}</h5>
+        <h5> 
+          <span v-if="project.agency">While @ <a v-if="project.agencyURL" target="_blank" :href="project.agencyURL" class="underline-animation">{{project.agency}}, </a></span> 
+          <span v-if="project.launchDate">{{project.launchDate}}</span>
+        </h5> 
+        <!-- <h5 v-else >While @ {{project.agency}}, {{project.launchDate}}</h5> -->
     </div>
   </div>
 </template>
@@ -20,37 +24,41 @@ export default {
       return {
         projects: [
           {
-            brand: 'ossa new york',
+            brand: 'OSSA New York',
             brandURL: 'https://www.ossanewyork.com/',
-            position: 'front end development',
-            details: 'shopify',
-            agency: 'owOw studio',
-            launchDate: 'coming soon'
-          },
-          {
-            brand: 'sleepme',
-            brandURL: 'https://sleep.me/',
-            position: 'front end development',
-            details: 'Shopify+, Vue, Headless, ReCharge, Shopify Scripts, Extend & Affirm',
-            agency: 'Sleepme',
-            agencyURL: 'https://sleep.me/',
-            launchDate: 'Launch Sept 2022 & Ongoing'
-          },
-          {
-            brand: 'chilisleep',
-            brandURL: 'https://chilisleep.com.au/',
             position: 'Front End Development',
-            details: 'Shopify+, Vue, Shopify Scripts, Clyde & Affirm',
+            details: 'Shopify',
+            launchDate: '2023 (Coming Soon)'
+          },
+          {
+            brand: 'Hangar9',
+            brandURL: 'https://hangar9.ca/',
+            position: 'Front End Development',
+            details: 'Shopify',
+            launchDate: '2023'
+          },
+          {
+            brand: 'Sleepme',
+            brandURL: 'https://sleep.me/',
+            position: 'Front End Development',
+            details: 'Nuxt, Vue, Shopify+, Headless, Headless ReCharge, Shopify Scripts, Extend & Affirm',
             agency: 'Sleepme',
             agencyURL: 'https://sleep.me/',
-            launchDate: 'Launch Sept 2022 & Ongoing'
+            launchDate: 'Launch 2022'
+          },
+          {
+            brand: 'Chilisleep',
+            position: 'Front End Development',
+            details: 'Vue, Shopify+, Shopify Scripts, Clyde & Affirm',
+            agency: 'Sleepme',
+            agencyURL: 'https://sleep.me/',
+            launchDate: 'Launch 2020'
           },
           {
             brand: 'Plant People',
             brandURL: 'https://www.plantpeople.co/',
             position: 'Front End Development',
             details: 'Shopify+, ReCharge, Shopify Scripts',
-            agency: 'owOw studio',
             launchDate: 'Launch June 2020 & Ongoing'
           },
           {
@@ -58,33 +66,21 @@ export default {
             brandURL: 'https://rosettagetty.com/',
             position: 'Front End Development',
             details: 'Shopify',
-            agency: 'owOw studio',
-            launchDate: '2021 & Ongoing'
+            launchDate: '2021 and Ongoing'
           },
           {
             brand: 'Woosh Beauty',
             brandURL: 'https://wooshbeauty.com/',
             position: 'Front End Development',
             details: 'Shopify',
-            agency: 'owOw studio',
-            launchDate: 'Launch 2018 & Ongoing'
+            launchDate: 'Launch 2018'
           },
           {
             brand: 'Griffin',
             brandURL: 'https://www.griffingam.com/',
             position: 'Front End Development',
             details: 'Webflow',
-            agency: 'owOw studio',
             launchDate: 'Launch 2020 & Ongoing'
-          },
-          {
-            brand: 'Pat Mcgrath Labs',
-            brandURL: 'https://www.patmcgrath.com',
-            position: 'Front End Development',
-            details: 'Shopify+',
-            agency: 'Verbal + Visual',
-            agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: 'Launch 2020'
           },
           {
             brand: 'MahZeDahr',
@@ -96,10 +92,19 @@ export default {
             launchDate: 'Launch 2021'
           },
           {
+            brand: 'Pat Mcgrath Labs',
+            brandURL: 'https://www.patmcgrath.com',
+            position: 'Front End Development',
+            details: 'Shopify+',
+            agency: 'Verbal + Visual',
+            agencyURL: 'https://verbalplusvisual.com/',
+            launchDate: 'Launch 2020'
+          },
+          {
             brand: 'Beauty Blender',
             brandURL: 'https://beautyblender.com/',
             position: 'Front End Development',
-            details: 'Shopify+',
+            details: 'Shopify+ ',
             agency: 'Sweden Unlimited',
             agencyURL: 'https://swedenunlimited.com/',
             launchDate: '2021'
@@ -144,7 +149,7 @@ export default {
             brand: 'HeTime',
             brandURL: 'https://hetime.com/',
             position: 'Technical Director',
-            details: 'Shopify ReCharge',
+            details: 'Shopify+, ReCharge',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
             launchDate: 'Launch 2020'
@@ -180,9 +185,8 @@ export default {
             brand: 'Rachel Lynn x Corri Lynn',
             brandURL: 'https://www.rlbycl.com/',
             position: 'Front End Development',
-            details: 'Shopify, Large Inventory Organization with Excel',
-            agency: 'owOw',
-            launchDate: '2020'
+            details: 'Shopify, Excel Large Inventory Organization',
+            launchDate: 'Launch 2020'
           },
           {
             brand: 'Linnea',
@@ -223,7 +227,7 @@ export default {
           {
             brand: 'Oral7',
             brandURL: 'https://oral7us.com/',
-            position: 'Front End Developer',
+            position: 'Technical Director',
             details: 'Shopify, Yotpo',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
@@ -232,7 +236,7 @@ export default {
           {
             brand: 'Vive Sana',
             brandURL: 'https://vivesana.com/',
-            position: 'Front End Developer',
+            position: 'Technical Director',
             details: 'Shopify',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
@@ -243,18 +247,15 @@ export default {
             brandURL: 'https://shop-cometees.biz/',
             position: 'Front End Development',
             details: 'Shopify',
-            agency: 'oWow Studio',
-            agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2019'
           },
           {
             brand: 'DumbGood',
             brandURL: 'https://dumbgood.com/',
             position: 'Front End Development',
-            details: 'Shopify+',
+            details: 'Shopify+, GSAP',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: '2019'
+            launchDate: 'Launch 2019'
           },
           {
             brand: 'Greats',
@@ -263,7 +264,7 @@ export default {
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: '2018'
+            launchDate: 'Launch 2018'
           },
           {
             brand: 'The Sak',
@@ -272,7 +273,6 @@ export default {
             details: 'Shopify+, Excel large inventory organization',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: '2018'
           },
           {
             brand: 'Paul Evans',
@@ -281,7 +281,6 @@ export default {
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: '2018'
           },
           {
             brand: 'Carhartt WIP',
@@ -290,7 +289,6 @@ export default {
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: '2018'
           },
           {
             brand: 'Irving Farm',
@@ -299,7 +297,6 @@ export default {
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: '2018'
           }
           
         ]        
