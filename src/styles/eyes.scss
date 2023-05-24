@@ -53,32 +53,32 @@
       }
       
       &::after {
-          // content: "";
-          // background: white;
-          // border-radius: 50%;
-          // position: absolute;
-          // height: 10px;
-          // width: 10px;
-          // top: 10px;
-          // right: 10px;
-        // @media screen and (min-width: 351px) and (max-width: $break--tblt) {
-        //   height: calc(5px + (10 - 5) * ((100vw - 351px) / (768 - 351)));
-        //   width: calc(5px + (10 - 5) * ((100vw - 351px) / (768 - 351)));
-        //   top: calc(3px + (6 - 3) * ((100vw - 351px) / (768 - 351)));
-        //   right: calc(3px + (6 - 3) * ((100vw - 351px) / (768 - 351)));
-        // }
-        // @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-        //   height: calc(10px + (12 - 10) * ((100vw - 768px) / (1440 - 768)));
-        //   width: calc(10px + (12 - 10) * ((100vw - 768px) / (1440 - 768)));
-        //   top: calc(6px + (8 - 6) *  ((100vw - 768px) / (1440 - 768)));
-        //   right: calc(6px + (8 - 6) * ((100vw - 768px) / (1440 - 768)));
-        // }
-        // @media screen and (min-width: $break--dsktp--lg){
-        //   height: calc(12px + (24 - 12) * ((100vw - 1440px) / (2000 - 1440)));
-        //   width: calc(12px + (24 - 12) * ((100vw - 1440px) / (2000 - 1440)));
-        //   top: calc(6px + (16 - 6) * ((100vw - 1440px) / (2000 - 1440)));
-        //   right: calc(6px + (16 - 6) * ((100vw - 1440px) / (2000 - 1440)));
-        // }
+          content: "";
+          background: white;
+          border-radius: 50%;
+          position: absolute;
+          height: 10px;
+          width: 10px;
+          top: 10px;
+          right: 10px;
+        @media screen and (min-width: 351px) and (max-width: $break--tblt) {
+          height: calc(5px + (10 - 5) * ((100vw - 351px) / (768 - 351)));
+          width: calc(5px + (10 - 5) * ((100vw - 351px) / (768 - 351)));
+          top: calc(3px + (6 - 3) * ((100vw - 351px) / (768 - 351)));
+          right: calc(3px + (6 - 3) * ((100vw - 351px) / (768 - 351)));
+        }
+        @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+          height: calc(10px + (12 - 10) * ((100vw - 768px) / (1440 - 768)));
+          width: calc(10px + (12 - 10) * ((100vw - 768px) / (1440 - 768)));
+          top: calc(6px + (8 - 6) *  ((100vw - 768px) / (1440 - 768)));
+          right: calc(6px + (8 - 6) * ((100vw - 768px) / (1440 - 768)));
+        }
+        @media screen and (min-width: $break--dsktp--lg){
+          height: calc(12px + (24 - 12) * ((100vw - 1440px) / (2000 - 1440)));
+          width: calc(12px + (24 - 12) * ((100vw - 1440px) / (2000 - 1440)));
+          top: calc(6px + (16 - 6) * ((100vw - 1440px) / (2000 - 1440)));
+          right: calc(6px + (16 - 6) * ((100vw - 1440px) / (2000 - 1440)));
+        }
       }
     }
   }
