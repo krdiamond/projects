@@ -38,6 +38,15 @@ export default {
             launchDate: '2023'
           },
           {
+            brand: 'Hanky Panky',
+            brandURL: 'https://www.hankypanky.com/',
+            position: 'Front End Development',
+            details: 'Shopify+',
+            agency: 'Driver Digital',
+            agencyURL: 'https://driver-digital.com/',
+            launchDate: '2023'
+          },
+          {
             brand: 'Sleepme',
             brandURL: 'https://sleep.me/',
             position: 'Front End Development',
