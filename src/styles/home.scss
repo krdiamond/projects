@@ -5,20 +5,18 @@
         font-family: 'Archivo-Black', Arial, sans-serif;
         letter-spacing: 0.22em;
         line-height: 1;
-        margin: 0;
-        padding: 3px 0px 10px 7px;
         font-size: 18px;
-        @media screen and (min-width: $break--min) and (max-width: $break--tblt) {
-            font-size: calc(18px + (99 - 18) * ((100vw - 200px) / (768 - 200)));
-        }
-        @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-            padding: 20px;
-            font-size: calc(95px + (191 - 95) * ((100vw - 768px) / (1440 - 768)));
-        }
-        @media screen and (min-width: $break--dsktp--lg){
-            padding: 20px;
-            font-size: calc(191px + (271 - 191) * ((100vw - 1440px) / (2000 - 1440)));
-        }
+        // @media screen and (min-width: $break--min) and (max-width: $break--tblt) {
+        //     font-size: calc(18px + (99 - 18) * ((100vw - 200px) / (768 - 200)));
+        // }
+        // @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+        //     padding: 20px;
+        //     font-size: calc(95px + (191 - 95) * ((100vw - 768px) / (1440 - 768)));
+        // }
+        // @media screen and (min-width: $break--dsktp--lg){
+        //     padding: 20px;
+        //     font-size: calc(191px + (271 - 191) * ((100vw - 1440px) / (2000 - 1440)));
+        // }
       }
       
       p {
