@@ -18,15 +18,19 @@
     color: $blue;
     text-align: center;
     min-width: 160px;
+    min-height: 600px;
 }
 
 .container {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
   height: 100%;
 }
   
+.border-test {
+    border: 3px solid green;
+}
 
 // --------------------------------- HOVER ANIMATION --------------------------------- //
 
@@ -48,14 +52,19 @@
 
 .flex {
     display: flex;
-    &-col {
+    &--col {
         flex-direction: column;
     }
 }
 
 .block {
     &--sm {
-        @media screen and (min-width: 351px) {
+        @media screen and (min-width: $break--mbl) {
+            display: block;
+        }
+    }
+    &--md {
+        @media screen and (min-width: $break--tblt) {
             display: block;
         }
     }
@@ -111,12 +120,16 @@
     }
 }
 
-.padding {
-    &-bottom {
-        &--20 {
-            padding-bottom: 20px;
-        }
+.bottom {
+    &--0 {
+        bottom: 0;
     }
+    &--40 {
+        bottom: 40px;
+    }
+}
+
+.padding {
     &--5 {
         padding: 5px; 
      }
@@ -126,6 +139,21 @@
     &--40 {
         padding: 40px; 
     }
+    &-right {
+        &--20 {
+            &--md {
+                @media screen and (min-width: $break--tblt) {
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+    &-bottom {
+        &--20 {
+            padding-bottom: 20px;
+        }
+    }
+
 
 }
 
@@ -186,6 +214,15 @@
 .space_x1 {
     letter-spacing: 0.27em;
 }
+
+.no-letter-spacing {
+    &--md {
+        @media screen and (min-width: $break--tblt) {
+            letter-spacing: 0.22em;
+        }
+    }
+}
+
 
 a {
     text-decoration: none;

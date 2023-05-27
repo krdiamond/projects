@@ -1,13 +1,13 @@
 <template>
   <div class="home container margin--20">
       <header>
-          <h1 class="flex flex-col">
-              <span>KRISTINA</span>
-              <span class="space_x1">DIAMOND</span>
+          <h1 class="flex flex--col block--md">
+              <span class="padding-right--20--md">KRISTINA</span>
+              <span class="space_x1 no-letter-spacing--md">DIAMOND</span>
           </h1>
           <p>web developer, specializing in all things shopify and e-commerce</p>
       </header>
-      <main>
+      <main class="position--absolute bottom--40">
           <div class="flex justify--center">
               <button class="blob-btn" @click="$emit('toggle-portfolio')">
                   PORTFOLIO
@@ -22,7 +22,7 @@
               </button>
           </div>
 
-        <div class="flex justify--evenly align--center block--sm padding--10">
+        <div class="flex justify--evenly align--center block--sm">
             <span class="twinkles">｡･:</span>
 
             <a href="https://www.linkedin.com/in/kristinadiamond/" target="_blank" aria-label="Navigate to Kristina Diamond's Linkedin">

@@ -25,7 +25,7 @@ npm run lint
 ```
 npm run build
 git add dist && git commit -m 'adding dist subtree'
-Run git subtree push --prefix dist origin gh-pages
+git subtree push --prefix dist origin gh-pages
 ```
 
 ### Customize configuration
