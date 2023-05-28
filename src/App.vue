@@ -7,7 +7,6 @@
       v-if="portfolio" 
       @toggle-portfolio="togglePortfolio()"
     />
-    <Eyes/>
   </div>
 </template>
 
