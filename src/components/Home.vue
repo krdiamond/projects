@@ -50,8 +50,6 @@ export default {
     updateWindowSize() {
       const mainWidth = this.$refs.main.clientWidth;
       const mainHeight = this.$refs.main.clientHeight;
-      console.log(mainWidth);
-      console.log(mainHeight);
       if (mainWidth > mainHeight) {
         this.horizontalLayout = true;
       } else {

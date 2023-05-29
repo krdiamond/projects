@@ -12,11 +12,11 @@
       padding: 5px;
       @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
         padding: calc(5px + (20 - 5) * ((100vw - 350px) / (768 - 350)));
-        font-size: calc(18px + (45 - 18) * ((100vw - 350px) / (768 - 350)));
+        font-size: calc(18px + (42 - 18) * ((100vw - 350px) / (768 - 350)));
       }
       @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
         padding: 20px;
-        font-size: calc(45px + (90 - 45) * ((100vw - 768px) / (1440 - 768)));
+        font-size: calc(42px + (90 - 42) * ((100vw - 768px) / (1440 - 768)));
       }
       @media screen and (min-width: $break--dsktp--lg){
           padding: 20px;
