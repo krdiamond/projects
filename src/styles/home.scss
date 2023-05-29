@@ -1,60 +1,77 @@
 @import '_variables.scss'; 
 
 .home {
-  h1 {
-    font-family: 'Archivo-Black', Arial, sans-serif;
-    letter-spacing: 0.22em;
-    line-height: 1;
-    font-size: 18px;
-  }
+    h1 {
+      font-family: 'Archivo-Black', Arial, sans-serif;
+      letter-spacing: 0.22em;
+      line-height: 1;
+      font-size: 18px;
+    }
 
-  .hor {
-    padding: 5px;
-    @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
-      padding: calc(5px + (20 - 5) * ((100vw - 350px) / (768 - 350)));
-      font-size: calc(18px + (45 - 18) * ((100vw - 350px) / (768 - 350)));
-    }
-    @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-      padding: 20px;
-      font-size: calc(45px + (90 - 45) * ((100vw - 768px) / (1440 - 768)));
-    }
-    @media screen and (min-width: $break--dsktp--lg){
+    .hor {
+      padding: 5px;
+      @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
+        padding: calc(5px + (20 - 5) * ((100vw - 350px) / (768 - 350)));
+        font-size: calc(18px + (45 - 18) * ((100vw - 350px) / (768 - 350)));
+      }
+      @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
         padding: 20px;
-        font-size: calc(90px + (125 - 90) * ((100vw - 1440px) / (2000 - 1440)));
+        font-size: calc(45px + (90 - 45) * ((100vw - 768px) / (1440 - 768)));
+      }
+      @media screen and (min-width: $break--dsktp--lg){
+          padding: 20px;
+          font-size: calc(90px + (125 - 90) * ((100vw - 1440px) / (2000 - 1440)));
+      }
     }
-  }
 
-  .vert {
-    padding: 5px;
-    @media screen and (min-width: $break--min) and (max-width: $break--tblt) {
-      padding: calc(5px + (20 - 5) * ((100vw - 200px) / (768 - 200)));
-      font-size: calc(18px + (90 - 18) * ((100vw - 200px) / (768 - 200)));
-    }
-    @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-      padding: 20px;
-      font-size: calc(46px + (94 - 46) * ((100vw - 768px) / (1440 - 768)));
-    }
-    @media screen and (min-width: $break--dsktp--lg){
+    .vert {
+      padding: 5px;
+      @media screen and (min-width: $break--min) and (max-width: $break--tblt) {
+        padding: calc(5px + (20 - 5) * ((100vw - 200px) / (768 - 200)));
+        font-size: calc(18px + (90 - 18) * ((100vw - 200px) / (768 - 200)));
+      }
+      @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
         padding: 20px;
-        font-size: calc(94px + (135 - 94) * ((100vw - 1440px) / (2000 - 1440)));
+        font-size: calc(46px + (94 - 46) * ((100vw - 768px) / (1440 - 768)));
+      }
+      @media screen and (min-width: $break--dsktp--lg){
+          padding: 20px;
+          font-size: calc(94px + (135 - 94) * ((100vw - 1440px) / (2000 - 1440)));
+      }
     }
-  }
    
       
-      p {
-        font-family: 'Alata-Regular', Arial, sans-serif;
-        font-size: 8px;
-        @media screen and (min-width: $break--min) and (max-width: $break--tblt) {
-            font-size: calc(8px + (40 - 8) * ((100vw - 200px) / (768 - 200)));
-        }
-        @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-            font-size: calc(40px + (77 - 40) * ((100vw - 768px) / (1440 - 768)));
-        }
-        @media screen and (min-width: $break--dsktp--lg){
-            font-size: calc(77px + (108 - 77) * ((100vw - 1440px) / (2000 - 1440)));
-        }
+    p {
+      font-family: 'Alata-Regular', Arial, sans-serif;
+      font-size: 8px;
+      padding: 5px;
+      @media screen and (min-width: $break--min) and (max-width: $break--tblt) {
+        font-size: calc(8px + (40 - 8) * ((100vw - 200px) / (768 - 200)));
       }
+      @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+          font-size: calc(40px + (77 - 40) * ((100vw - 768px) / (1440 - 768)));
+      }
+      @media screen and (min-width: $break--dsktp--lg){
+          font-size: calc(77px + (108 - 77) * ((100vw - 1440px) / (2000 - 1440)));
+      }
+    }
+
+    .p-hor {
+      @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
+        padding: 0;
+        font-size: calc(16px + (20 - 16) * ((100vw - 350px) / (768 - 350)));
+      }
+      @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+        padding: 0;
+        font-size: calc(20px + (40 - 20) * ((100vw - 768px) / (1440 - 768)));
+      }
+      @media screen and (min-width: $break--dsktp--lg){
+         padding: 0;
+         font-size: calc(40px + (56 - 40) * ((100vw - 1440px) / (2000 - 1440)));
+      }
+    }
       
+  
       .twinkles {
         @media screen and (max-width: 350px) {
           display: none;
