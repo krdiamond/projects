@@ -15,6 +15,16 @@
       return {
         boxes: [],
         isTransition: false, // Indicates if the transition animation should be applied
+        icons: [
+            {
+              svg: 'OSSA New York',
+              link: 'https://www.ossanewyork.com/',
+            },
+            {
+              svg: 'OSSA New York',
+              link: 'https://www.ossanewyork.com/',
+            },
+          ]
       };
     },
     mounted() {
@@ -41,7 +51,7 @@
             // Add more breakpoints and corresponding box sizes as needed
         ];
   
-        let boxSize = 100; // Default box size
+        let boxSize = null; // Default box size
   
         for (const breakpoint of breakpoints) {
           if (mainWidth >= breakpoint.width) {
@@ -51,28 +61,42 @@
           }
         }
   
-        const isOverlapping = (box, otherBoxes) => {
-          for (const otherBox of otherBoxes) {
-            if (
-              box.left < otherBox.left + otherBox.width &&
-              box.left + box.width > otherBox.left &&
-              box.top < otherBox.top + otherBox.height &&
-              box.top + box.height > otherBox.top
-            ) {
-              return true;
-            }
+        const boxes = [];
+        for (let i = 0; i < 4; i++) {
+          const box = this.generateBox(boxSize, mainWidth, mainHeight, boxes);
+          boxes.push(box);
+        }
+        this.boxes = boxes;
+
+        // const boxes = [];
+        // this.icons.forEach((box) => {
+        //   const box = this.generateBox(boxSize, mainWidth, mainHeight, boxes);
+        //   boxes.push(box);
+        // });
+        // this.boxes = boxes;
+
+      },
+      isOverlapping(box, otherBoxes) {
+        for (const otherBox of otherBoxes) {
+          if (
+            box.left < otherBox.left + otherBox.width &&
+            box.left + box.width > otherBox.left &&
+            box.top < otherBox.top + otherBox.height &&
+            box.top + box.height > otherBox.top
+          ) {
+            return true;
           }
-          return false;
-        };
-  
-        const getRandomPosition = (boxSize, mainWidth, mainHeight) => {
-          const left = Math.random() * (mainWidth - boxSize);
-          const top = Math.random() * (mainHeight - boxSize);
-          return { left, top };
-        };
-  
-        const generateBox = (boxSize, mainWidth, mainHeight, otherBoxes) => {
-          const position = getRandomPosition(boxSize, mainWidth, mainHeight);
+        }
+        return false;
+      },
+      getRandomPosition(boxSize, mainWidth, mainHeight) {
+        const left = Math.random() * (mainWidth - boxSize);
+        const top = Math.random() * (mainHeight - boxSize);
+        return { left, top };
+      },
+      generateBox(boxSize, mainWidth, mainHeight, otherBoxes) {
+          const position = this.getRandomPosition(boxSize, mainWidth, mainHeight);
+          
           const box = {
             left: position.left,
             top: position.top,
@@ -85,19 +109,11 @@
               height: boxSize + 'px',
             },
           };
-          if (isOverlapping(box, otherBoxes)) {
-            return generateBox(boxSize, mainWidth, mainHeight, otherBoxes);
+          if (this.isOverlapping(box, otherBoxes)) {
+            return this.generateBox(boxSize, mainWidth, mainHeight, otherBoxes);
           }
           return box;
-        };
-  
-        const boxes = [];
-        for (let i = 0; i < 4; i++) {
-          const box = generateBox(boxSize, mainWidth, mainHeight, boxes);
-          boxes.push(box);
-        }
-        this.boxes = boxes;
-      },
+        },
     },
   };
   </script>
