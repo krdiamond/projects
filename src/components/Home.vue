@@ -1,7 +1,8 @@
 <template>
-  <div class="home container margin--20 flex flex--col">
+  <div ref="main" class="home container margin--20 flex flex--col">
       <header>
-          <h1 class="flex flex--col block--md">
+        <h1 v-if="horizontalLayout" class="hor">KRISTINA DIAMOND</h1>
+        <h1 v-else class="vert flex flex--col block--md">
               <span class="padding-right--20--md">KRISTINA</span>
               <span class="space_x1 no-letter-spacing--md">DIAMOND</span>
           </h1>
@@ -32,7 +33,30 @@ export default {
   name: 'Home',
   components: {
     RandomDots,
+  },
+  data() {
+      return {
+        horizontalLayout: false,
+      };
+    },
+  mounted() {
+      this.updateWindowSize();
+      window.addEventListener("resize", this.updateWindowSize);
+    },
+  methods: {
+    updateWindowSize() {
+      const mainWidth = this.$refs.main.clientWidth;
+      const mainHeight = this.$refs.main.clientHeight;
+      console.log(mainWidth);
+      console.log(mainHeight);
+      if (mainWidth > mainHeight) {
+        this.horizontalLayout = true;
+      } else {
+        this.horizontalLayout = false;
+      }
 
+    }
+    
   },
 }
 </script>
