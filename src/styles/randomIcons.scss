@@ -2,19 +2,9 @@
 
 
 .box {
-    background: black;
-    border-radius: 50%;
     transition: left 0.5s ease, top 0.5s ease;
   }
 
   .transition {
     transition: left 0.5s ease, top 0.5s ease; /* CSS transition for left and top properties during animation */
-}
-
-.floating-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
 }
