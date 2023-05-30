@@ -8,6 +8,10 @@
       font-size: 18px;
     }
 
+    .mobile-hor {
+      font-size: 24px !important;
+    }
+
     .hor {
       padding: 5px;
       @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
