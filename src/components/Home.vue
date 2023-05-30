@@ -11,7 +11,7 @@
           </p>
       </header>
       <div>
-        <button class="blob-btn" @click="$emit('toggle-portfolio')">
+        <button class="blob-btn" @click="$emit('open-portfolio')">
           PORTFOLIO
           <span class="blob-btn__inner">
               <span class="blob-btn__blobs">

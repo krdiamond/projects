@@ -1,11 +1,11 @@
 <template>
   <div class="main-border position--fixed">
     <Home 
-      @toggle-portfolio="togglePortfolio()"
+      @open-portfolio="openPortfolio()"
       />
     <Portfolio 
       v-if="portfolio" 
-      @toggle-portfolio="togglePortfolio()"
+      @close-portfolio="closePortfolio()"
     />
   </div>
 </template>
@@ -28,11 +28,13 @@ export default {
       }
   },
   methods: {
-    togglePortfolio() {
+    openPortfolio() {
       setTimeout(() => {
-        this.portfolio = !this.portfolio;
+        this.portfolio = true;
         }, 700);
-      
+    },
+    closePortfolio() {
+        this.portfolio = false;
     },
   },
 }
