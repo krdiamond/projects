@@ -3,11 +3,8 @@
 
 
 .eyes {
-  display: none;
-  @media screen and (min-width: 350px) {
-    display: inline-block;
-  }
   .eye {
+    transition: height 0.5s ease, width 0.5s ease;
     border-radius: 50%;
     overflow: hidden;
     position: relative;

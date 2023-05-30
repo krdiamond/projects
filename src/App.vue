@@ -29,7 +29,10 @@ export default {
   },
   methods: {
     togglePortfolio() {
-      this.portfolio = !this.portfolio;
+      setTimeout(() => {
+        this.portfolio = !this.portfolio;
+        }, 700);
+      
     },
   },
 }

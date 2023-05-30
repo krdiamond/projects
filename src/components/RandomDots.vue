@@ -8,17 +8,12 @@
             <img :src="icon.svg" alt="" />
           </a>
         </div>
-        <div ref="eyes" class="position--absolute ag-icon_item">
-          <Eyes />
-        </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-  import Eyes from '../components/Eyes.vue';
-  
+<script>  
   import linkedIn from '../assets/linkedin.svg';
   import gitHub from '../assets/github.svg';
   import mail from '../assets/mail.svg';
@@ -26,9 +21,6 @@
 
 export default {
   name: 'RandomDots',
-  components: {
-    Eyes,
-  },
   data() {
     return {
       amplitude: 20, // Amplitude value for floating effect

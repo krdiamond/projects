@@ -1,9 +1,9 @@
 <template> 
   <div class="portfolio container position--absolute z-index--1 text-align--left top--0 bg--white padding--20">
-    <button @click="$emit('toggle-portfolio')" class="position--fixed right--40 top--40 bg--none border--none">        
+    <button @click="$emit('toggle-portfolio')" class="position--fixed right--40 top--40 bg--none border--none width--20">        
         <img src="../assets/x.svg"  title="Close Portfolio" width="30">
     </button>
-    <div  v-for="project in projects"  :key="project.brand" class="padding-bottom--20 min-width--200">
+    <div  v-for="project in projects"  :key="project.brand" class="padding-bottom--40 min-width--200">
         <h2 v-if="project.brandURL" ><a target="_blank" :href="project.brandURL"  class="underline-animation">{{project.brand}}</a></h2>
         <h2 v-else >{{project.brand}}</h2>
         <h3>{{project.position}}</h3>

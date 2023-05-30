@@ -8,10 +8,6 @@
       font-size: 18px;
     }
 
-    .mobile-hor {
-      font-size: 24px !important;
-    }
-
     .hor {
       padding: 5px;
       @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
@@ -49,8 +45,11 @@
       font-family: 'Alata-Regular', Arial, sans-serif;
       font-size: 8px;
       padding: 5px;
-      @media screen and (min-width: $break--min) and (max-width: $break--tblt) {
-        font-size: calc(8px + (40 - 8) * ((100vw - 200px) / (768 - 200)));
+      // @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
+      //   font-size: calc(8px + (40 - 8) * ((100vw - 200px) / (768 - 200)));
+      // }
+      @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
+        font-size: calc(18px + (40 - 18) * ((100vw - 350px) / (768 - 350)));
       }
       @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
           font-size: calc(40px + (77 - 40) * ((100vw - 768px) / (1440 - 768)));

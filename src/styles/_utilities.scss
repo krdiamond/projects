@@ -18,18 +18,25 @@
     color: $blue;
     text-align: center;
     min-width: 160px;
+    min-height: 320px;
+    @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
+        min-height: calc(320px + (450 - 320) * ((100vw - 350px) / (768 - 350)));
+    }
+    @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+        min-height: calc(450px + (600 - 450) * ((100vw - 768px) / (1440 - 768)));
+    }
+    @media screen and (min-width: $break--dsktp--lg){
+        min-height: calc(600px + (800 - 600) *  ((100vw - 1440px) / (2000 - 1440)));
+    }
+
 }
 
 .container {
-  position: relative;
-  overflow: hidden;
+  overflow-x: scroll;
   width: 100%;
   height: 100%;
 }
-  
-.border-test {
-    border: 3px solid green;
-}
+
 
 // --------------------------------- HOVER ANIMATION --------------------------------- //
 
@@ -152,8 +159,8 @@
         }
     }
     &-bottom {
-        &--20 {
-            padding-bottom: 20px;
+        &--40 {
+            padding-bottom: 40px;
         }
     }
 
@@ -174,6 +181,12 @@
 .min-width {
     &--200 {
         min-width: 200px;
+    }
+}
+
+.width {
+    &--20 {
+        width: 20px;
     }
 }
 
