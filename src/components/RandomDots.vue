@@ -2,7 +2,7 @@
   <div class="position--relative height--full margin--3per">
     <div class="height--full">
       <div ref="main" class="position--center position--absolute">
-        <div ref="box" class="box position--absolute ag-icon_item" v-for="(icon, index) in iconsWithStats" :key="'icon-' + index" :style="icon.box.style">
+        <div ref="box" class="box position--absolute ag-icon_item" v-for="(icon, index) in icons" :key="'icon-' + index">
           <img v-if="icon.copyText" @click="copyToClipboard(icon.copyText)" :src="icon.svg" alt="" />
           <a v-else :href="icon.link" target="_blank" :aria-label="icon.ariaLabel">
             <img :src="icon.svg" alt="" />
@@ -23,8 +23,7 @@ export default {
   name: 'RandomDots',
   data() {
     return {
-      amplitude: 16, // Amplitude value for floating effect
-      currentBreakpoint: 0,
+      amplitude: 20, // Amplitude value for floating effect
         icons: [
           {
             svg: linkedIn,
@@ -48,83 +47,12 @@ export default {
             ariaLabel: "View Kristina Diamond's Resume"
           },
         ],
-        breakpoints: [
-          { width: 0, size: 20 }, 
-          { width: 250, size: 40 },
-          { width: 668, size: 80 }, 
-      ],
     };
   },
   mounted() {
-    this.updateBoxSize();
-    this.checkOverLap();
     this.initFloating();
-    window.addEventListener('resize', this.handleResize);
-  },
-  computed: {
-    iconsWithStats() {
-      return this.icons.map((icon) => {
-        return {
-          ...icon,
-          box: this.generateBox(icon.boxSize, icon.mainWidth, icon.mainHeight, this.icons),
-        };
-      });
-    },
   },
   methods: {
-    handleResize() {
-      this.isTransition = true; // Enable transition animation
-      this.updateBoxSize();
-      // Wait for transition animation to complete before disabling it
-    },
-    updateBoxSize() {
-      const mainWidth = this.$refs.main.clientWidth;
-      const mainHeight = this.$refs.main.clientHeight;
-
-      let boxSize = null; // Default box size
-
-      this.breakpoints.forEach((breakpoint) => {
-        if (mainWidth >= breakpoint.width) {
-          boxSize = breakpoint.size;
-        } else {
-          return false;
-        }
-      });
-
-      this.icons = this.icons.map((icon) => {
-        return {
-          ...icon,
-          boxSize,
-          mainWidth,
-          mainHeight,
-        };
-      });
-    },
-    generateBox(boxSize, mainWidth, mainHeight) {
-      const position = this.getRandomPosition(boxSize, mainWidth, mainHeight);
-      const box = {
-        left: position.left,
-        top: position.top,
-        width: boxSize,
-        height: boxSize,
-        style: {
-          left: position.left + 'px',
-          top: position.top + 'px',
-          width: boxSize + 'px',
-          height: boxSize + 'px',
-        },
-      };
-      return box;
-    },
-    checkOverLap() {
-      // const boxes = this.$refs.box;
-      console.log(this.icons);
-    },
-    getRandomPosition(boxSize, mainWidth, mainHeight) {
-      const left = Math.random() * (mainWidth - boxSize);
-      const top = Math.random() * (mainHeight - boxSize);
-      return { left, top };
-    },
     initFloating() {
         const iconItems = this.$refs.box; // Reference to the icon items
         iconItems.forEach((item, index) => {

@@ -3,29 +3,44 @@
 
 .box {
     transition: left 0.5s ease, top 0.5s ease;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
+    @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
+      height: calc(20px + (40 - 20) * ((100vw - 200px) / (350 - 200)));
+      width: calc(20px + (40 - 20) * ((100vw - 200px) / (350 - 200)));
+    }
+    @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt){
+      height: calc(40px + (60 - 40) * ((100vw - 350px) / (768 - 350)));
+      width: calc(40px + (60 - 40) * ((100vw - 350px) / (768 - 350)));
+    }
+    @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+      height: calc(60px + (100 - 60) * ((100vw - 768px) / (1440 - 768)));
+      width: calc(60px + (100 - 60) * ((100vw - 768px) / (1440 - 768)));
+    }
+    @media screen and (min-width: $break--dsktp--lg){
+      height: calc(100px + (150 - 100) * ((100vw - 1440px) / (2000 - 1440)));
+      width: calc(100px + (150 - 100) * ((100vw - 1440px) / (2000 - 1440)));
+    }
+
   }
 
   .ag-icon_item:first-child {
-    top: 10%;
+    bottom: 10%;
     left: 10%;
   }
   .ag-icon_item:nth-child(2) {
-    top: 40%;
-    left: 15%;
+    bottom: 60%;
+    left: 30%;
   }
   .ag-icon_item:nth-child(3) {
-    left: 5%;
-    bottom: 10%;
+    bottom: 30%;
+    right: 30%;
   }
   .ag-icon_item:last-child {
-    right: 15%;
-    bottom: 10%;
+    bottom: 60%;
+    right: 5%;
   }
   
-
-
 .floating-icon {
   position: absolute;
   top: 50%;
@@ -38,3 +53,5 @@ img {
   width: 100%;
   height: 100%;
 }
+
+
