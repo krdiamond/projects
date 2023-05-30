@@ -23,7 +23,7 @@ export default {
   name: 'RandomDots',
   data() {
     return {
-      amplitude: 16, // Amplitude value for floating effect
+      amplitude: 20, // Amplitude value for floating effect
         icons: [
           {
             svg: linkedIn,
