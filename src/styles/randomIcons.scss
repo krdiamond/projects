@@ -2,14 +2,29 @@
 
 
 .box {
-    background: black;
-    border-radius: 50%;
     transition: left 0.5s ease, top 0.5s ease;
+    width: 40px;
+    height: 40px;
   }
 
-  .transition {
-    transition: left 0.5s ease, top 0.5s ease; /* CSS transition for left and top properties during animation */
-}
+  .ag-icon_item:first-child {
+    top: 10%;
+    left: 10%;
+  }
+  .ag-icon_item:nth-child(2) {
+    top: 40%;
+    left: 15%;
+  }
+  .ag-icon_item:nth-child(3) {
+    left: 5%;
+    bottom: 10%;
+  }
+  .ag-icon_item:last-child {
+    right: 15%;
+    bottom: 10%;
+  }
+  
+
 
 .floating-icon {
   position: absolute;
@@ -17,4 +32,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
