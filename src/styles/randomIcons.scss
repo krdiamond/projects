@@ -8,24 +8,22 @@
   }
 
   .ag-icon_item:first-child {
-    top: 10%;
+    bottom: 10%;
     left: 10%;
   }
   .ag-icon_item:nth-child(2) {
-    top: 40%;
-    left: 15%;
+    bottom: 60%;
+    left: 30%;
   }
   .ag-icon_item:nth-child(3) {
-    left: 5%;
-    bottom: 10%;
+    bottom: 30%;
+    right: 30%;
   }
   .ag-icon_item:last-child {
-    right: 15%;
-    bottom: 10%;
+    bottom: 60%;
+    right: 5%;
   }
   
-
-
 .floating-icon {
   position: absolute;
   top: 50%;
