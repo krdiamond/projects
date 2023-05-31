@@ -43,15 +43,18 @@
       
     p {
       font-family: 'Alata-Regular', Arial, sans-serif;
-      font-size: 8px;
-      padding: 5px;
+      font-size: 12px;
+      padding: 0 5px 10px;
       @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
-        font-size: calc(18px + (20 - 18) * ((100vw - 350px) / (768 - 350)));
+        padding: 0 20px 10px;
+        font-size: calc(18px + (28 - 18) * ((100vw - 350px) / (768 - 350)));
       }
       @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-          font-size: calc(20px + (77 - 20) * ((100vw - 768px) / (1440 - 768)));
+          padding: 0 20px 10px;
+          font-size: calc(28px + (77 - 24) * ((100vw - 768px) / (1440 - 768)));
       }
       @media screen and (min-width: $break--dsktp--lg){
+          padding: 0 20px 10px;
           font-size: calc(77px + (108 - 77) * ((100vw - 1440px) / (2000 - 1440)));
       }
     }
