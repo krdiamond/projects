@@ -95,7 +95,6 @@
     
     &__blob {
       position: absolute;
-      top: 5px;
       width: calc(100% / $numOfBlobs);
       height: 100%;
       background: $blue;
