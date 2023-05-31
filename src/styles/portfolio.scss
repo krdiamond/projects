@@ -8,10 +8,10 @@
         font-weight: 400;
         font-size: 24px;
         @media screen and (min-width: $break--mbl) and (max-width: $break--tblt) {
-            font-size: calc(24px + (72 - 24) * ((100vw - 380px) / (768 - 380)));
+            font-size: calc(24px + (62 - 24) * ((100vw - 380px) / (768 - 380)));
         }
         @media screen and (min-width: $break--tblt) {
-            font-size: 72px;
+            font-size: 62px;
         }
     }
     
@@ -53,4 +53,17 @@
           font-size: 24px;
         }
       }
+
+      .close {
+        right: 40px;
+        top: 40px;
+        width: 20px;
+        @media screen and (min-width: $break--tblt) {
+          width: 40px;
+          right: 60px;
+          top: 50px;
+        }
+      }
 }
+
+

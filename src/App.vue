@@ -31,7 +31,7 @@ export default {
     openPortfolio() {
       setTimeout(() => {
         this.portfolio = true;
-        }, 600);
+        }, 520);
     },
     closePortfolio() {
         this.portfolio = false;

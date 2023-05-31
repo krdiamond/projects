@@ -1,10 +1,6 @@
 <template> 
   <div class="portfolio container position--absolute z-index--1 text-align--left top--0 bg--white padding--20">
-
-
-
-
-    <button type="button" @click="$emit('close-portfolio')" class="position--fixed right--40 top--40 bg--none border--none width--20" aria-label="Close Portfolio">        
+    <button type="button" @click="$emit('close-portfolio')" class="close position--fixed bg--none border--none" aria-label="Close Portfolio">        
         <img src="../assets/x.svg"  title="Close Portfolio" alt="Close Portfolio">
     </button>
     <div  v-for="project in projects"  :key="project.brand" class="padding-bottom--30 min-width--200">
@@ -35,6 +31,13 @@ export default {
             launchDate: '2023 (Coming Soon)'
           },
           {
+            brand: 'Rosetta Getty',
+            brandURL: 'https://rosettagetty.com/',
+            position: 'Front End Development',
+            details: 'Shopify',
+            launchDate: '2021'
+          },
+          {
             brand: 'Hangar9',
             brandURL: 'https://hangar9.ca/',
             position: 'Front End Development',
@@ -57,7 +60,7 @@ export default {
             details: 'Nuxt, Vue, Shopify+, Headless, Headless ReCharge, Shopify Scripts, Extend & Affirm',
             agency: 'Sleepme',
             agencyURL: 'https://sleep.me/',
-            launchDate: 'Launch 2022'
+            launchDate: '2022'
           },
           {
             brand: 'Chilisleep',
@@ -65,59 +68,29 @@ export default {
             details: 'Vue, Shopify+, Shopify Scripts, Clyde & Affirm',
             agency: 'Sleepme',
             agencyURL: 'https://sleep.me/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Plant People',
             brandURL: 'https://www.plantpeople.co/',
             position: 'Front End Development',
             details: 'Shopify+, ReCharge, Shopify Scripts',
-            launchDate: 'Launch June 2020 & Ongoing'
-          },
-          {
-            brand: 'Rosetta Getty',
-            brandURL: 'https://rosettagetty.com/',
-            position: 'Front End Development',
-            details: 'Shopify',
-            launchDate: '2021 and Ongoing'
-          },
-          {
-            brand: 'Woosh Beauty',
-            brandURL: 'https://wooshbeauty.com/',
-            position: 'Front End Development',
-            details: 'Shopify',
-            launchDate: 'Launch 2018'
-          },
-          {
-            brand: 'Griffin',
-            brandURL: 'https://www.griffingam.com/',
-            position: 'Front End Development',
-            details: 'Webflow',
-            launchDate: 'Launch 2020 & Ongoing'
-          },
-          {
-            brand: 'MahZeDahr',
-            brandURL: 'https://mahzedahrbakery.com/',
-            position: 'Front End Development',
-            details: 'Shopify+, ReCharge',
-            agency: 'Sweden Unlimited',
-            agencyURL: 'https://swedenunlimited.com/',
-            launchDate: 'Launch 2021'
-          },
-          {
-            brand: 'Pat Mcgrath Labs',
-            brandURL: 'https://www.patmcgrath.com',
-            position: 'Front End Development',
-            details: 'Shopify+',
-            agency: 'Verbal + Visual',
-            agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020 & Ongoing'
           },
           {
             brand: 'Beauty Blender',
             brandURL: 'https://beautyblender.com/',
             position: 'Front End Development',
             details: 'Shopify+ ',
+            agency: 'Sweden Unlimited',
+            agencyURL: 'https://swedenunlimited.com/',
+            launchDate: '2021'
+          },
+          {
+            brand: 'MahZeDahr',
+            brandURL: 'https://mahzedahrbakery.com/',
+            position: 'Front End Development',
+            details: 'Shopify+, ReCharge',
             agency: 'Sweden Unlimited',
             agencyURL: 'https://swedenunlimited.com/',
             launchDate: '2021'
@@ -132,13 +105,36 @@ export default {
             launchDate: '2021'
           },
           {
+            brand: 'Woosh Beauty',
+            brandURL: 'https://wooshbeauty.com/',
+            position: 'Front End Development',
+            details: 'Shopify',
+            launchDate: '2020'
+          },
+          {
+            brand: 'Griffin',
+            brandURL: 'https://www.griffingam.com/',
+            position: 'Front End Development',
+            details: 'Webflow',
+            launchDate: '2020'
+          },
+          {
+            brand: 'Pat Mcgrath Labs',
+            brandURL: 'https://www.patmcgrath.com',
+            position: 'Front End Development',
+            details: 'Shopify+',
+            agency: 'Verbal + Visual',
+            agencyURL: 'https://verbalplusvisual.com/',
+            launchDate: '2020'
+          },
+          {
             brand: 'Bala Bangles',
             brandURL: 'https://www.shopbala.com/',
             position: 'Technical Director',
             details: 'Shopify+',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: 'Launch 2019 & 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Radswan',
@@ -147,7 +143,7 @@ export default {
             details: 'Shopify+',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Aavrani',
@@ -156,7 +152,7 @@ export default {
             details: 'Shopify',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'HeTime',
@@ -165,7 +161,7 @@ export default {
             details: 'Shopify+, ReCharge',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Ohza',
@@ -174,7 +170,7 @@ export default {
             details: 'Shopify+',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Olo',
@@ -183,7 +179,7 @@ export default {
             details: 'Shopify',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Vanessa Lundborg',
@@ -192,14 +188,14 @@ export default {
             details: 'Webflow',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Rachel Lynn x Corri Lynn',
             brandURL: 'https://www.rlbycl.com/',
             position: 'Front End Development',
             details: 'Shopify, Excel Large Inventory Organization',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Linnea',
@@ -208,7 +204,7 @@ export default {
             details: 'Shopify',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Grabanzos',
@@ -217,7 +213,7 @@ export default {
             details: 'Shopify',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Kolsvart',
@@ -226,7 +222,7 @@ export default {
             details: 'Shopify+',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Popup Mob',
@@ -235,7 +231,7 @@ export default {
             details: 'Webflow',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Oral7',
@@ -244,7 +240,7 @@ export default {
             details: 'Shopify, Yotpo',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Vive Sana',
@@ -253,13 +249,14 @@ export default {
             details: 'Shopify',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: 'Launch 2020'
+            launchDate: '2020'
           },
           {
             brand: 'Come Tees',
             brandURL: 'https://shop-cometees.biz/',
             position: 'Front End Development',
             details: 'Shopify',
+            launchDate: '2019'
           },
           {
             brand: 'DumbGood',
@@ -268,7 +265,7 @@ export default {
             details: 'Shopify+, GSAP',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: 'Launch 2019'
+            launchDate: '2019'
           },
           {
             brand: 'Greats',
@@ -277,7 +274,7 @@ export default {
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: 'Launch 2018'
+            launchDate: '2018'
           },
           {
             brand: 'The Sak',
@@ -286,6 +283,7 @@ export default {
             details: 'Shopify+, Excel large inventory organization',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
+            launchDate: '2018'
           },
           {
             brand: 'Paul Evans',
@@ -294,6 +292,7 @@ export default {
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
+            launchDate: '2018'
           },
           {
             brand: 'Carhartt WIP',
@@ -302,6 +301,7 @@ export default {
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
+            launchDate: '2018'
           },
           {
             brand: 'Irving Farm',
@@ -310,6 +310,7 @@ export default {
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
+            launchDate: '2018'
           }
           
         ]        
