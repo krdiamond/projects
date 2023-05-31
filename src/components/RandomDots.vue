@@ -43,7 +43,7 @@ export default {
           },
           {
             svg: resume,
-            link: 'KristinaDiamondResume.pdf',
+            link: 'https://krdiamond.github.io/portfolio//KristinaDiamondResume.pdf',
             ariaLabel: "View Kristina Diamond's Resume"
           },
         ],
@@ -84,7 +84,7 @@ export default {
     copyToClipboard(text) {
         navigator.clipboard.writeText(text)
           .then(() => {
-            alert("Kristina's e-mail address is copied to your clipboard. krdiamond@gmail.com");
+            alert("✉️ krdiamond@gmail.com ✉️ copied to your clipboard");
           })
           .catch((error) => {
             console.error('Failed to copy text: ', error);
