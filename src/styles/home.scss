@@ -47,11 +47,11 @@
       padding: 0 5px 10px;
       @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
         padding: 0 20px 10px;
-        font-size: calc(18px + (28 - 18) * ((100vw - 350px) / (768 - 350)));
+        font-size: calc(17px + (42 - 17) * ((100vw - 350px) / (768 - 350)));
       }
       @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
           padding: 0 20px 10px;
-          font-size: calc(28px + (77 - 24) * ((100vw - 768px) / (1440 - 768)));
+          font-size: calc(42px + (77 - 42) * ((100vw - 768px) / (1440 - 768)));
       }
       @media screen and (min-width: $break--dsktp--lg){
           padding: 0 20px 10px;
