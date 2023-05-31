@@ -3,7 +3,9 @@
     <div class="height--full">
       <div ref="main" class="position--center position--absolute">
         <div ref="box" class="box position--absolute ag-icon_item" v-for="(icon, index) in icons" :key="'icon-' + index">
-          <img v-if="icon.copyText" @click="copyToClipboard(icon.copyText)" :src="icon.svg" alt="" />
+          <button v-if="icon.copyText" type="button" :aria-label="icon.ariaLabel">
+            <img :title="icon.ariaLabel"  @click="copyToClipboard(icon.copyText)" :src="icon.svg" :alt="icon.ariaLabel" />
+          </button>
           <a v-else :href="icon.link" target="_blank" :aria-label="icon.ariaLabel">
             <img :src="icon.svg" alt="" />
           </a>
@@ -39,7 +41,7 @@ export default {
             copyText: 'krdiamond@gmail.com',
             svg: mail,
             link: 'https://github.com/krdiamond',
-            ariaLabel: "View Kristina Diamond's Github"
+            ariaLabel: "Copy Kristina Diamond's email to your clipboard"
           },
           {
             svg: resume,
