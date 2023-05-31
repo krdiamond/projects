@@ -3,7 +3,7 @@
     <div class="height--full">
       <div ref="main" class="position--center position--absolute">
         <div ref="box" class="box position--absolute ag-icon_item" v-for="(icon, index) in icons" :key="'icon-' + index">
-          <button v-if="icon.copyText" type="button" :aria-label="icon.ariaLabel">
+          <button v-if="icon.copyText" type="button" :aria-label="icon.ariaLabel" class="box">
             <img :title="icon.ariaLabel"  @click="copyToClipboard(icon.copyText)" :src="icon.svg" :alt="icon.ariaLabel" />
           </button>
           <a v-else :href="icon.link" target="_blank" :aria-label="icon.ariaLabel">

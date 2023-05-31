@@ -46,21 +46,15 @@ export default {
       this.updateWindowSize();
       window.addEventListener("resize", this.updateWindowSize);
   },
-  computed: {
-    isPhoneHorizontal() {
-      return (window.orientation === 90 || window.orientation === -90);
-    }
-  },
   methods: {
     updateWindowSize() {
       const mainWidth = this.$refs.main.clientWidth;
       const mainHeight = this.$refs.main.clientHeight;
-      if (mainWidth > mainHeight) {
+      if ((mainWidth > mainHeight) ||  (window.orientation === 90 || window.orientation === -90)) {
         this.horizontalLayout = true;
       } else {
         this.horizontalLayout = false;
       }
-
     },
   },
 }
