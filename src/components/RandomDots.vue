@@ -1,8 +1,6 @@
 <template>
-  <div class="position--relative height--full margin--3per">
-    <div class="height--full">
-      <div ref="main" class="position--center position--absolute">
-        <div ref="box" class="box position--absolute ag-icon_item" v-for="(icon, index) in icons" :key="'icon-' + index">
+    <div class="flex justify--evenly margin-top--30" >
+        <div ref="box" class="box ag-icon_item" v-for="(icon, index) in icons" :key="'icon-' + index">
           <button v-if="icon.copyText" type="button" :aria-label="icon.ariaLabel" class="box">
             <img :title="icon.ariaLabel"  @click="copyToClipboard(icon.copyText)" :src="icon.svg" :alt="icon.ariaLabel" />
           </button>
@@ -10,10 +8,10 @@
             <img :src="icon.svg" alt="" />
           </a>
         </div>
-      </div>
     </div>
-  </div>
 </template>
+
+
 
 <script>  
   import linkedIn from '../assets/linkedin.svg';

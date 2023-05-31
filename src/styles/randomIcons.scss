@@ -1,11 +1,11 @@
 @import '_variables.scss'; 
 
 
+
 .box {
     transition: width 0.1s ease, height 0.1s ease;
     width: 20px;
     height: 20px;
-    display: inline-block; /*Makes the icons inline block level elements. This will let us animate the transform property.*/ 
     animation: float 5s ease-in-out infinite; /*Applies the float keyframe animation over 5s and makes it run infinitely.*/
     @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
       height: calc(20px + (40 - 20) * ((100vw - 200px) / (350 - 200)));
@@ -27,22 +27,15 @@
   }
 
   .ag-icon_item:first-child {
-    bottom: 10%;
-    left: 10%;
     animation-delay: 2s;
   }
   .ag-icon_item:nth-child(2) {
-    bottom: 60%;
-    left: 30%;
+
   }
   .ag-icon_item:nth-child(3) {
-    bottom: 30%;
-    right: 30%;
     animation-delay: 1s;
   }
   .ag-icon_item:last-child {
-    bottom: 60%;
-    right: 5%;
     animation-delay: 3s;
   }
 

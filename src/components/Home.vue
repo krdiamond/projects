@@ -1,5 +1,5 @@
 <template>
-  <div ref="main" class="home container margin--20 flex flex--col">
+  <div ref="main" class="home container margin--20 flex flex--col justify--center">
       <header>
         <h1 v-if="horizontalLayout" class="hor">KRISTINA DIAMOND</h1>
         <h1 v-else class="vert flex flex--col block--md">

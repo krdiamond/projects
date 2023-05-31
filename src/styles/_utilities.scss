@@ -18,16 +18,16 @@
     color: $blue;
     text-align: center;
     min-width: 160px;
-    min-height: 320px;
-    @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
-        min-height: calc(320px + (450 - 320) * ((100vw - 350px) / (768 - 350)));
-    }
-    @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-        min-height: calc(450px + (600 - 450) * ((100vw - 768px) / (1440 - 768)));
-    }
-    @media screen and (min-width: $break--dsktp--lg){
-        min-height: calc(600px + (800 - 600) *  ((100vw - 1440px) / (2000 - 1440)));
-    }
+    // min-height: 320px;
+    // @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
+    //     min-height: calc(320px + (450 - 320) * ((100vw - 350px) / (768 - 350)));
+    // }
+    // @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+    //     min-height: calc(450px + (600 - 450) * ((100vw - 768px) / (1440 - 768)));
+    // }
+    // @media screen and (min-width: $break--dsktp--lg){
+    //     min-height: calc(600px + (800 - 600) *  ((100vw - 1440px) / (2000 - 1440)));
+    // }
 
 }
 
@@ -179,6 +179,9 @@ button {
     &-top {
         &---5 {
             margin-top: -5px;
+        }
+        &--30 {
+            margin-top: 30px;
         }
     }
     &--3per {
