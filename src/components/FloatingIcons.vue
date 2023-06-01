@@ -20,7 +20,7 @@
   import resume from '../assets/resume.svg';
 
 export default {
-  name: 'RandomDots',
+  name: 'FloatingIcons',
   data() {
     return {
         icons: [
