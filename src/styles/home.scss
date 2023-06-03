@@ -6,23 +6,29 @@
       letter-spacing: 0.22em;
       line-height: 1;
       font-size: 18px;
+      @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
+        font-size: calc(18px + (30 - 18) * ((100vw - 200px) / (350 - 200)));
+      }
+      @media screen and (min-width: $break--mbl--sm) {
+        font-size: 30px;
+      }
     }
 
-    .hor {
-      padding: 5px;
-      @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
-        padding: calc(5px + (20 - 5) * ((100vw - 350px) / (768 - 350)));
-        font-size: calc(18px + (40 - 18) * ((100vw - 350px) / (768 - 350)));
-      }
-      @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-        padding: 20px;
-        font-size: calc(40px + (90 - 40) * ((100vw - 768px) / (1440 - 768)));
-      }
-      @media screen and (min-width: $break--dsktp--lg){
-          padding: 20px;
-          font-size: calc(90px + (125 - 90) * ((100vw - 1440px) / (2000 - 1440)));
-      }
-    }
+    // .hor {
+    //   padding: 5px;
+    //   @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
+    //     padding: calc(5px + (20 - 5) * ((100vw - 350px) / (768 - 350)));
+    //     font-size: calc(18px + (40 - 18) * ((100vw - 350px) / (768 - 350)));
+    //   }
+    //   @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
+    //     padding: 20px;
+    //     font-size: calc(40px + (90 - 40) * ((100vw - 768px) / (1440 - 768)));
+    //   }
+    //   @media screen and (min-width: $break--dsktp--lg){
+    //       padding: 20px;
+    //       font-size: calc(90px + (125 - 90) * ((100vw - 1440px) / (2000 - 1440)));
+    //   }
+    // }
 
     .vert {
       padding: 5px;

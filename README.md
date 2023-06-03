@@ -21,7 +21,7 @@ npm run lint
 ```
 
 
-### Lints and fixes files
+### Launch to Github Pages
 ```
 npm run build
 git add dist && git commit -m 'adding dist subtree'

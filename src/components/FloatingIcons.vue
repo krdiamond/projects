@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify--evenly margin-top--30 margin-bottom--30" >
+    <div class="flex justify--evenly" >
         <div ref="box" class="box ag-icon_item" v-for="(icon, index) in icons" :key="'icon-' + index">
           <button v-if="icon.copyText" type="button" :aria-label="icon.ariaLabel" class="box">
             <img :title="icon.ariaLabel"  @click="copyToClipboard(icon.copyText)" :src="icon.svg" :alt="icon.ariaLabel" />

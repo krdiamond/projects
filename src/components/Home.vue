@@ -1,18 +1,17 @@
 <template>
   <div ref="main" class="home container margin--20 flex flex--col " :class="{ 'justify--center': !horizontalLayout }"> 
-      <!-- <header>
-        <h1 v-if="horizontalLayout" class="hor">KRISTINA DIAMOND</h1>
-        <h1 class="vert flex flex--col block--md">
-              <span class="padding-right--20--md">KRISTINA</span>
-              <span class="space_x1 no-letter-spacing--md">DIAMOND</span>
-          </h1>
-          <p :class="{ 'p-hor': horizontalLayout }" >
+      <header class="max-width--340 margin--auto">
+        <h1 class="flex flex--col">
+              <span >KRISTINA</span>
+              <span class="space_x1">DIAMOND</span>
+        </h1>
+          <!-- <p :class="{ 'p-hor': horizontalLayout }" >
             front end web developer specializing in shopify projects
-          </p>
-      </header> -->
-      <section>
+          </p> -->
+      </header>
+      <section class="max-width--340 margin--auto">
         <button class="blob-btn" @click="$emit('open-portfolio')">
-            PORTFOLIO
+            PROJECTS
             <span class="blob-btn__inner">
                 <span class="blob-btn__blobs">
                     <span class="blob-btn__blob"></span>
@@ -22,9 +21,10 @@
                 </span>
             </span>
         </button>
+        <FloatingIcons class="padding-top--20"/>
       </section>
         
-      <FloatingIcons/>
+      
 
   </div>
 </template>
@@ -44,7 +44,7 @@ export default {
       };
     },
   mounted() {
-      this.updateWindowSize();
+      // this.updateWindowSize();
       window.addEventListener("resize", this.updateWindowSize);
   },
   computed: {
