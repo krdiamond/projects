@@ -177,6 +177,9 @@ button {
 }
 
 .margin {
+    &--30 {
+        margin: 30px;
+    }
     &--auto {
         margin: 0 auto;
     }

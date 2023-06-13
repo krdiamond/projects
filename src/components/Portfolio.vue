@@ -1,13 +1,12 @@
 <template> 
   <div class="portfolio container position--absolute z-index--1 text-align--left top--0 bg--white padding--20">
-    <div>
-      <button type="button" @click="$emit('close-portfolio')" class="close float--right bg--none border--none" aria-label="Close Portfolio">        
-          <img src="../assets/x.svg"  title="Close Portfolio" alt="Close Portfolio">
+      <button type="button" @click="$emit('close-portfolio')" class="close position--fixed margin--30 top--0 right--0 bg--none border--none" aria-label="Close Portfolio">        
+            <img src="../assets/x.svg"  title="Close Portfolio" alt="Close Portfolio">
       </button>
-    </div>
 
 
-    <div  v-for="project in projects"  :key="project.brand" class="padding-bottom--30 min-width--200">
+
+        <div  v-for="project in projects"  :key="project.brand" class="padding-bottom--30 min-width--200">
         <h2 v-if="project.brandURL" ><a target="_blank" :href="project.brandURL"  class="underline-animation">{{project.brand}}</a></h2>
         <h2 v-else >{{project.brand}}</h2>
         <h3>{{project.position}}</h3>
@@ -15,9 +14,16 @@
         <h5> 
           <span v-if="project.agency">While @ <a v-if="project.agencyURL" target="_blank" :href="project.agencyURL" class="underline-animation">{{project.agency}}, </a></span> 
           <span v-if="project.launchDate">{{project.launchDate}}</span>
-        </h5> 
+        </h5>  -->
         <!-- <h5 v-else >While @ {{project.agency}}, {{project.launchDate}}</h5> -->
+
     </div>
+    
+    
+
+
+
+
   </div>
 </template>
 

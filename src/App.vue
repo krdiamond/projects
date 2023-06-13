@@ -24,7 +24,7 @@ export default {
   },
   data() {
       return {
-        portfolio: false,
+        portfolio: true,
       }
   },
   methods: {
