@@ -12,12 +12,15 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border: 10px solid $blue;
     margin: 10px;
     z-index: 9999;
     color: $blue;
     text-align: center;
     min-width: 160px;
+    border: 5px solid $blue;
+    @media screen and (min-width: $break--tblt) {
+      border: 6px solid $blue;
+    }
     // min-height: 320px;
     // @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt) {
     //     min-height: calc(320px + (450 - 320) * ((100vw - 350px) / (768 - 350)));
@@ -69,16 +72,18 @@ button {
     &--col {
         flex-direction: column;
     }
+    &--row {
+        &--md {
+            @media screen and (min-width: $break--tblt) {
+                flex-direction: row;
+            }
+        }
+    }
 }
 
 .block {
     &--sm {
         @media screen and (min-width: $break--mbl) {
-            display: block;
-        }
-    }
-    &--md {
-        @media screen and (min-width: $break--tblt) {
             display: block;
         }
     }
@@ -157,23 +162,14 @@ button {
     &--40 {
         padding: 40px; 
     }
-    &-right {
-        &--20 {
-            &--md {
-                @media screen and (min-width: $break--tblt) {
-                    padding-right: 20px;
-                }
-            }
-        }
-    }
     &-bottom {
         &--30 {
             padding-bottom: 30px;
         }
     }
     &-top {
-        &--20 {
-            padding-top: 20px;
+        &--10 {
+            padding-top: 10px;
         }
     }
 
@@ -215,13 +211,6 @@ button {
 .width {
     &--20 {
         width: 20px;
-    }
-    &--40 {
-        &--md {
-            @media screen and (min-width: $break--tblt) {
-                width: 40px;
-            }
-        }
     }
 }
 
@@ -271,6 +260,12 @@ button {
     }
 }
 
+.float {
+    &--right {
+        float: right;
+    }
+}
+
 // -------------------------------------- tbd -------------------------------------- //
 .border {
     &--none {
@@ -280,14 +275,6 @@ button {
 
 .space_x1 {
     letter-spacing: 0.27em;
-}
-
-.no-letter-spacing {
-    &--md {
-        @media screen and (min-width: $break--tblt) {
-            letter-spacing: 0.22em;
-        }
-    }
 }
 
 

@@ -1,15 +1,13 @@
 <template>
-  <div ref="main" class="home container margin--20 flex flex--col " :class="{ 'justify--center': !horizontalLayout }"> 
-      <header class="max-width--340 margin--auto">
+  <div ref="main" class="home container margin--20 flex flex--col align--center " :class="{ 'justify--center': !horizontalLayout }"> 
+      <header class="max-width--340 margin--auto ">
         <h1 class="flex flex--col">
               <span >KRISTINA</span>
               <span class="space_x1">DIAMOND</span>
         </h1>
-          <!-- <p :class="{ 'p-hor': horizontalLayout }" >
-            front end web developer specializing in shopify projects
-          </p> -->
+        <p>front end web developer <br> specializing in shopify</p>
       </header>
-      <section class="max-width--340 margin--auto">
+      <section class="max-width--340 margin--auto ">
         <button class="blob-btn" @click="$emit('open-portfolio')">
             PROJECTS
             <span class="blob-btn__inner">
@@ -21,7 +19,7 @@
                 </span>
             </span>
         </button>
-        <FloatingIcons class="padding-top--20"/>
+        <FloatingIcons class="padding-top--10"/>
       </section>
         
       
@@ -45,7 +43,7 @@ export default {
     },
   mounted() {
       // this.updateWindowSize();
-      window.addEventListener("resize", this.updateWindowSize);
+      // window.addEventListener("resize", this.updateWindowSize);
   },
   computed: {
     isPhoneHorizontal() {

@@ -8,10 +8,10 @@
         font-weight: 400;
         font-size: 24px;
         @media screen and (min-width: $break--mbl) and (max-width: $break--tblt) {
-            font-size: calc(24px + (62 - 24) * ((100vw - 380px) / (768 - 380)));
+            font-size: calc(24px + (38 - 24) * ((100vw - 380px) / (500 - 380)));
         }
         @media screen and (min-width: $break--tblt) {
-            font-size: 62px;
+            font-size: 38px;
         }
     }
     
@@ -21,10 +21,10 @@
         padding-bottom: 5px;
         font-size: 18px;
         @media screen and (min-width: $break--mbl) and (max-width: $break--tblt) {
-          font-size: calc(18px + (47 - 18) * ((100vw - 380px) / (768 - 380)));
+          font-size: calc(18px + (28 - 18) * ((100vw - 380px) / (500 - 380)));
         }
         @media screen and (min-width: $break--tblt) {
-          font-size: 47px;
+          font-size: 28px;
         }
       }
 
@@ -34,10 +34,10 @@
         padding-bottom: 5px;
         font-size: 12px;
         @media screen and (min-width: $break--mbl) and (max-width: $break--tblt) {
-          font-size: calc(12px + (28 - 12) * ((100vw - 380px) / (768 - 380)));
+          font-size: calc(12px + (18 - 12) * ((100vw - 380px) / (500 - 380)));
         }
         @media screen and (min-width: $break--tblt) {
-          font-size: 28px;
+          font-size: 18px;
         }
       }
 
@@ -47,22 +47,15 @@
         font-weight: 200;
         font-size: 10px;
         @media screen and (min-width: $break--mbl) and (max-width: $break--tblt) {
-          font-size: calc(10px + (24 - 10) * ((100vw - 380px) / (768 - 380)));
+          font-size: calc(10px + (18 - 10) * ((100vw - 380px) / (500 - 380)));
         }
         @media screen and (min-width: $break--tblt) {
-          font-size: 24px;
+          font-size: 18px;
         }
       }
 
       .close {
-        right: 40px;
-        top: 40px;
         width: 20px;
-        @media screen and (min-width: $break--tblt) {
-          width: 40px;
-          right: 60px;
-          top: 50px;
-        }
       }
 }
 

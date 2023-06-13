@@ -1,8 +1,12 @@
 <template> 
   <div class="portfolio container position--absolute z-index--1 text-align--left top--0 bg--white padding--20">
-    <button type="button" @click="$emit('close-portfolio')" class="close position--fixed bg--none border--none" aria-label="Close Portfolio">        
-        <img src="../assets/x.svg"  title="Close Portfolio" alt="Close Portfolio">
-    </button>
+    <div>
+      <button type="button" @click="$emit('close-portfolio')" class="close float--right bg--none border--none" aria-label="Close Portfolio">        
+          <img src="../assets/x.svg"  title="Close Portfolio" alt="Close Portfolio">
+      </button>
+    </div>
+
+
     <div  v-for="project in projects"  :key="project.brand" class="padding-bottom--30 min-width--200">
         <h2 v-if="project.brandURL" ><a target="_blank" :href="project.brandURL"  class="underline-animation">{{project.brand}}</a></h2>
         <h2 v-else >{{project.brand}}</h2>

@@ -12,8 +12,8 @@
       width: calc(20px + (40 - 20) * ((100vw - 200px) / (350 - 200)));
     }
     @media screen and (min-width: $break--mbl--sm){
-      height: 40px;
-      width: 40px;
+      height: 35px;
+      width: 35px;
     }
     // @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt){
     //   height: calc(40px + (60 - 40) * ((100vw - 350px) / (768 - 350)));
