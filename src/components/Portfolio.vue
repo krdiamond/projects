@@ -1,6 +1,6 @@
 <template> 
   <div class="portfolio container position--absolute z-index--1 text-align--left top--0 bg--white padding--20">
-      <button type="button" @click="$emit('close-portfolio')" class="close position--fixed margin--30 top--0 right--0 bg--none border--none" aria-label="Close Portfolio">        
+      <button type="button" @click="$emit('close-portfolio')" class="close position--fixed top--0 right--0 bg--none border--none" aria-label="Close Portfolio">        
             <img src="../assets/x.svg"  title="Close Portfolio" alt="Close Portfolio">
       </button>
       <div  v-for="project in projects"  :key="project.brand" class="padding-bottom--30 min-width--200">
