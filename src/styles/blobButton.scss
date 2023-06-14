@@ -26,17 +26,10 @@
       width: 200px;
       font-size: 16px;
     }
-
-    // @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-    //   width: calc(300px + (600 - 300) * ((100vw - 768px) / (1440 - 768)));
-    //   font-size: calc(16px + (24 - 16) * ((100vw - 768px) / (1440 - 768)));
-    //   padding: 20px;
-    // }
-    // @media screen and (min-width: $break--dsktp--lg){
-    //   width: calc(600px + (800 - 600) * ((100vw - 1440px) / (2000 - 1440)));
-    //   font-size: calc(24px + (32 - 24) * ((100vw - 1440px) / (2000 - 1440)));
-    //   padding: 20px;
-    // }
+    @media screen and (min-width: $break--tblt) {
+      width: calc(300px + (500 - 300) * ((100vw - 768px) / (2000 - 768)));
+      font-size: calc(24px + (36 - 24) * ((100vw - 768px) / (2000 - 768)));
+    }
     
     &:before {
       content: "";
@@ -126,5 +119,4 @@
       }
     }
     
-  }
-  
+}

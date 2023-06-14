@@ -15,18 +15,11 @@
       height: 35px;
       width: 35px;
     }
-    // @media screen and (min-width: $break--mbl--sm) and (max-width: $break--tblt){
-    //   height: calc(40px + (60 - 40) * ((100vw - 350px) / (768 - 350)));
-    //   width: calc(40px + (60 - 40) * ((100vw - 350px) / (768 - 350)));
-    // }
-    // @media screen and (min-width: $break--tblt) and (max-width: $break--dsktp--lg){
-    //   height: calc(60px + (100 - 60) * ((100vw - 768px) / (1440 - 768)));
-    //   width: calc(60px + (100 - 60) * ((100vw - 768px) / (1440 - 768)));
-    // }
-    // @media screen and (min-width: $break--dsktp--lg){
-    //   height: calc(100px + (150 - 100) * ((100vw - 1440px) / (2000 - 1440)));
-    //   width: calc(100px + (150 - 100) * ((100vw - 1440px) / (2000 - 1440)));
-    // }
+    @media screen and (min-width: $break--tblt){
+      margin-top: 20px;
+      height: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
+      width: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
+    }
 
   }
 
