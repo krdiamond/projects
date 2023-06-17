@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 import './styles/portfolio.scss';
-import './styles/randomIcons.scss';
+import './styles/bouncingIcons.scss';
 import './styles/eyes.scss';
 import './styles/home.scss';
 import './styles/blobButton.scss';

@@ -19,19 +19,19 @@
                 </span>
             </span>
         </button>
-        <FloatingIcons class="padding-top--10"/>
+        <BouncingIcons class="padding-top--10"/>
       </section>
   </div>
 </template>
 
 <script>
 
-import FloatingIcons from "../components/FloatingIcons";
+import BouncingIcons from "../components/BouncingIcons";
 
 export default {
   name: 'Home',
   components: {
-    FloatingIcons,
+    BouncingIcons,
   },
   data() {
       return {

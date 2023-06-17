@@ -20,7 +20,7 @@
   import resume from '../assets/resume.svg';
 
 export default {
-  name: 'FloatingIcons',
+  name: 'BouncingIcons',
   data() {
     return {
         icons: [
@@ -30,15 +30,15 @@ export default {
             ariaLabel: "View Kristina Diamond's Linkedin"
           },
           {
-            svg: gitHub,
-            link: 'https://github.com/krdiamond',
-            ariaLabel: "View Kristina Diamond's Github"
-          },
-          {
             copyText: 'krdiamond@gmail.com',
             svg: mail,
             link: 'https://github.com/krdiamond',
             ariaLabel: "Copy Kristina Diamond's email to your clipboard"
+          },
+          {
+            svg: gitHub,
+            link: 'https://github.com/krdiamond',
+            ariaLabel: "View Kristina Diamond's Github"
           },
           {
             svg: resume,
