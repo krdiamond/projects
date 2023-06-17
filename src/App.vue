@@ -25,17 +25,33 @@ export default {
   data() {
       return {
         portfolio: false,
+        isTouchDevice: false,
       }
   },
+  mounted() {
+      this.updateWindowSize();
+      window.addEventListener("resize", this.updateWindowSize);
+  },
   methods: {
+    updateWindowSize() {
+     this.isTouchDevice = (('ontouchstart' in window) ||
+        (navigator.maxTouchPoints > 0) ||
+        (navigator.msMaxTouchPoints > 0));
+    },
     openPortfolio() {
-      setTimeout(() => {
+      if (this.isTouchDevice === true) {
+        setTimeout(() => {
         this.portfolio = true;
         }, 520);
+      }
+      else {
+        this.portfolio = true;
+      }
     },
     closePortfolio() {
         this.portfolio = false;
     },
+    
   },
 }
 
