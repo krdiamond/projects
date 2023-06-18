@@ -42,7 +42,7 @@ export default {
           },
           {
             svg: resume,
-            link: 'https://krdiamond.github.io/portfolio//KristinaDiamondResume.pdf',
+            link: 'https://krdiamond.github.io/projects/KristinaDiamondResume.pdf',
             ariaLabel: "View Kristina Diamond's Resume"
           },
         ],
