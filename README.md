@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ![Kristina Diamond](KristinaDiamond.png)
 
 <!-- ## Project setup
