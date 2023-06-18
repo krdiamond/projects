@@ -32,7 +32,6 @@ export default {
           {
             copyText: 'krdiamond@gmail.com',
             svg: mail,
-            link: 'https://github.com/krdiamond',
             ariaLabel: "Copy Kristina Diamond's email to your clipboard"
           },
           {
@@ -42,7 +41,7 @@ export default {
           },
           {
             svg: resume,
-            link: 'https://krdiamond.github.io/projects/KristinaDiamondResume.pdf',
+            link: 'KristinaDiamondResume.pdf',
             ariaLabel: "View Kristina Diamond's Resume"
           },
         ],
