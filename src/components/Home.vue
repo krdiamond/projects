@@ -1,9 +1,10 @@
 <template>
   <div ref="main" class="home container margin--20 flex flex--col align--center justify--center"> 
-      <header>
-        <h1 class="flex flex--col">
-              <span >KRISTINA</span>
-              <span class="space_x1">DIAMOND</span>
+      <header class="position--relative">
+        <Eyes class="eyes position--absolute"/>
+        <h1 class="flex flex--col position--relative">
+            <span >KRISTINA</span>
+            <span class="space_x1">DIAMOND</span>
         </h1>
         <p>front end web developer <br> specializing in shopify</p>
       </header>
@@ -19,7 +20,7 @@
                 </span>
             </span>
         </button>
-        <BouncingIcons class="padding-top--10"/>
+        <BouncingIcons class="padding-top--12"/>
       </section>
   </div>
 </template>
@@ -27,11 +28,13 @@
 <script>
 
 import BouncingIcons from "../components/BouncingIcons";
+import Eyes from "../components/Eyes";
 
 export default {
   name: 'Home',
   components: {
     BouncingIcons,
+    Eyes,
   },
   data() {
       return {

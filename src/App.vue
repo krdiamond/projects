@@ -24,7 +24,7 @@ export default {
   },
   data() {
       return {
-        portfolio: true,
+        portfolio: false,
         isTouchDevice: false,
       }
   },

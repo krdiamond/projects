@@ -8,10 +8,10 @@
         font-weight: 400;
         font-size: 18px;
         @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
-          font-size: calc(18px + (22 - 18) * ((100vw - 200px) / (350 - 200)));
+          font-size: calc(18px + (26 - 18) * ((100vw - 200px) / (350 - 200)));
         }
         @media screen and (min-width: $break--mbl--sm) {
-          font-size: 22px;
+          font-size: 26px;
         }
         @media screen and (min-width: $break--tblt) {
           font-size: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
@@ -55,12 +55,12 @@
         font-family: degular, sans-serif;
         font-style: italic;
         font-weight: 200;
-        font-size: 12px;
+        font-size: 10px;
         @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
-          font-size: calc(12px + (16 - 12) * ((100vw - 200px) / (350 - 200)));
+          font-size: calc(10px + (12 - 10) * ((100vw - 200px) / (350 - 200)));
         }
         @media screen and (min-width: $break--mbl--sm) {
-          font-size: 16px;
+          font-size: 12px;
         }
         @media screen and (min-width: $break--tblt) {
           font-size: calc(26px + (42 - 26) * ((100vw - 768px) / (2000 - 768)));
