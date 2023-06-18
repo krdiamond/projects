@@ -1,11 +1,7 @@
-![Kristina Diamond](KristinaDiamond.gif)
-
-
-
-<!-- <h1 style="text-align: center;">Kristina Diamond</h1>
+<h1 style="text-align: center">Kristina Diamond</h1>
 <p align="center">
   <img width="460" height="300" src="KristinaDiamond.gif">
-</p> -->
+</p>
 
 
 
