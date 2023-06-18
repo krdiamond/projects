@@ -19,7 +19,7 @@
     -webkit-mask-image: -webkit-radial-gradient(white, black); /* fix for safari overflow:hidden and border radius */
     width: 40px;
     height: 40px;
-    border: 5px solid $blue;
+    border: 4px solid $blue;
     @media screen and (min-width: $break--tblt){
       border: 6px solid $blue;
       margin-top: 20px;

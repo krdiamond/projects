@@ -12,7 +12,7 @@
               </h5>
           </div> 
       </div>
-      <div class="padding-left--20">
+      <div class="padding-left--10">
           <button type="button" @click="$emit('close-portfolio')" class="close bg--none border--none" aria-label="Close Portfolio">        
               <img src="../assets/x.svg"  title="Close Portfolio" alt="Close Portfolio">
           </button>
@@ -31,62 +31,74 @@ export default {
           {
             brand: 'OSSA New York',
             brandURL: 'https://www.ossanewyork.com/',
-            position: 'Front End Development',
-            details: 'Shopify',
-            launchDate: '2023 (Coming Soon)'
-          },
-          {
-            brand: 'Rosetta Getty',
-            brandURL: 'https://rosettagetty.com/',
-            position: 'Front End Development',
-            details: 'Shopify',
-            launchDate: '2021'
-          },
-          {
-            brand: 'Hangar9',
-            brandURL: 'https://hangar9.ca/',
-            position: 'Front End Development',
+            position: 'Front End Developer',
             details: 'Shopify',
             launchDate: '2023'
           },
           {
+            brand: 'Plant People',
+            brandURL: 'https://www.plantpeople.co/',
+            position: 'Front End Developer',
+            details: 'Shopify+, ReCharge, Shopify Scripts',
+            launchDate: '2023'
+          },
+          {
+            brand: 'Sleep.me',
+            brandURL: 'https://sleep.me/',
+            position: 'Front End Developer',
+            details: 'Nuxt, Vue, Shopify+, Headless, Headless ReCharge, Shopify Scripts, Extend & Affirm',
+            launchDate: '2023'
+          },
+          {
+            brand: 'Hangar9',
+            brandURL: 'https://hangar9.ca/',
+            position: 'Front End Developer',
+            details: 'Shopify',
+            launchDate: '2023',
+            agency: 'Driver Digital',
+            agencyURL: 'https://driver-digital.com/',
+          },
+          {
             brand: 'Hanky Panky',
             brandURL: 'https://www.hankypanky.com/',
-            position: 'Front End Development',
+            position: 'Front End Developer',
             details: 'Shopify+',
             agency: 'Driver Digital',
             agencyURL: 'https://driver-digital.com/',
             launchDate: '2023'
           },
           {
-            brand: 'Sleepme',
-            brandURL: 'https://sleep.me/',
-            position: 'Front End Development',
-            details: 'Nuxt, Vue, Shopify+, Headless, Headless ReCharge, Shopify Scripts, Extend & Affirm',
-            agency: 'Sleepme',
-            agencyURL: 'https://sleep.me/',
+            brand: 'Chilisleep',
+            position: 'Front End Developer',
+            details: 'Vue, Shopify+, Shopify Scripts, Clyde & Affirm',
             launchDate: '2022'
           },
           {
-            brand: 'Chilisleep',
-            position: 'Front End Development',
-            details: 'Vue, Shopify+, Shopify Scripts, Clyde & Affirm',
-            agency: 'Sleepme',
-            agencyURL: 'https://sleep.me/',
-            launchDate: '2020'
+            brand: 'Rosetta Getty',
+            brandURL: 'https://rosettagetty.com/',
+            position: 'Front End Developer',
+            details: 'Shopify',
+            launchDate: '2021'
           },
           {
-            brand: 'Plant People',
-            brandURL: 'https://www.plantpeople.co/',
-            position: 'Front End Development',
-            details: 'Shopify+, ReCharge, Shopify Scripts',
-            launchDate: '2020 & Ongoing'
+            brand: 'Woosh Beauty',
+            brandURL: 'https://wooshbeauty.com/',
+            position: 'Front End Developer',
+            details: 'Shopify',
+            launchDate: '2022'
+          },
+          {
+            brand: 'Griffin',
+            brandURL: 'https://www.griffingam.com/',
+            position: 'Front End Developer',
+            details: 'Webflow',
+            launchDate: '2022'
           },
           {
             brand: 'Beauty Blender',
             brandURL: 'https://beautyblender.com/',
-            position: 'Front End Development',
-            details: 'Shopify+ ',
+            position: 'Front End Developer',
+            details: 'Shopify+',
             agency: 'Sweden Unlimited',
             agencyURL: 'https://swedenunlimited.com/',
             launchDate: '2021'
@@ -94,7 +106,7 @@ export default {
           {
             brand: 'MahZeDahr',
             brandURL: 'https://mahzedahrbakery.com/',
-            position: 'Front End Development',
+            position: 'Front End Developer',
             details: 'Shopify+, ReCharge',
             agency: 'Sweden Unlimited',
             agencyURL: 'https://swedenunlimited.com/',
@@ -103,30 +115,16 @@ export default {
           {
             brand: 'Monrow',
             brandURL: 'https://www.monrow.com/',
-            position: 'Front End Development',
+            position: 'Front End Developer',
             details: 'Shopify+',
             agency: 'Sweden Unlimited',
             agencyURL: 'https://swedenunlimited.com/',
             launchDate: '2021'
           },
           {
-            brand: 'Woosh Beauty',
-            brandURL: 'https://wooshbeauty.com/',
-            position: 'Front End Development',
-            details: 'Shopify',
-            launchDate: '2020'
-          },
-          {
-            brand: 'Griffin',
-            brandURL: 'https://www.griffingam.com/',
-            position: 'Front End Development',
-            details: 'Webflow',
-            launchDate: '2020'
-          },
-          {
             brand: 'Pat Mcgrath Labs',
             brandURL: 'https://www.patmcgrath.com',
-            position: 'Front End Development',
+            position: 'Front End Developer',
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
@@ -198,12 +196,12 @@ export default {
           {
             brand: 'Rachel Lynn x Corri Lynn',
             brandURL: 'https://www.rlbycl.com/',
-            position: 'Front End Development',
+            position: 'Front End Developer',
             details: 'Shopify, Excel Large Inventory Organization',
             launchDate: '2020'
           },
           {
-            brand: 'Linnea',
+            brand: 'Linneas Lights',
             brandURL: 'https://linneaslights.com/',
             position: 'Technical Director',
             details: 'Shopify',
@@ -259,14 +257,14 @@ export default {
           {
             brand: 'Come Tees',
             brandURL: 'https://shop-cometees.biz/',
-            position: 'Front End Development',
+            position: 'Front End Developer',
             details: 'Shopify',
             launchDate: '2019'
           },
           {
             brand: 'DumbGood',
             brandURL: 'https://dumbgood.com/',
-            position: 'Front End Development',
+            position: 'Front End Developer',
             details: 'Shopify+, GSAP',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
@@ -275,7 +273,7 @@ export default {
           {
             brand: 'Greats',
             brandURL: 'https://www.greats.com/',
-            position: 'Front End Development',
+            position: 'Front End Developer',
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
@@ -284,7 +282,7 @@ export default {
           {
             brand: 'The Sak',
             brandURL: 'https://www.thesak.com/',
-            position: 'Front End Development',
+            position: 'Front End Developer',
             details: 'Shopify+, Excel large inventory organization',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
@@ -293,7 +291,7 @@ export default {
           {
             brand: 'Paul Evans',
             brandURL: 'https://www.paulevansny.com/',
-            position: 'Front End Development',
+            position: 'Front End Developer',
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
@@ -302,7 +300,7 @@ export default {
           {
             brand: 'Carhartt WIP',
             brandURL: 'https://us.carhartt-wip.com/',
-            position: 'Front End Development',
+            position: 'Front End Developer',
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
@@ -311,7 +309,7 @@ export default {
           {
             brand: 'Irving Farm',
             brandURL: 'https://irvingfarm.com/',
-            position: 'Front End Development',
+            position: 'Front End Developer',
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',

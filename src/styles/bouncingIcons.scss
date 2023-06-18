@@ -17,8 +17,8 @@
     }
     @media screen and (min-width: $break--tblt){
       margin-top: 20px;
-      height: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
-      width: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
+      height: calc(50px + (80 - 50) * ((100vw - 768px) / (2000 - 768)));
+      width: calc(50px + (80 - 50) * ((100vw - 768px) / (2000 - 768)));
     }
 
   }
