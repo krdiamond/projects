@@ -1,5 +1,5 @@
 # Kristina Diamond
-![Kristina Diamond](https://krdiamond.github.io/projects/KristinaDiamond.gif)
+![Kristina Diamond](KristinaDiamond.gif)
 
 
 
