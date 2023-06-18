@@ -1,5 +1,9 @@
 # Kristina Diamond
-![Kristina Diamond](KristinaDiamond.gif)
+
+<p align="center">
+  <img width="460" height="300" src="KristinaDiamond.gif">
+</p>
+<!-- ![Kristina Diamond]() -->
 
 
 
