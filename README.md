@@ -1,6 +1,11 @@
-# portfolio
+# Kristina Diamond
+![Kristina Diamond](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif https://krdiamond.github.io/portfolio//KristinaDiamond.gif)
 
-## Project setup
+
+
+
+
+<!-- ## Project setup
 ```
 npm install
 ```
@@ -29,4 +34,4 @@ git subtree push --prefix dist origin gh-pages
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See [Configuration Reference](https://cli.vuejs.org/config/). -->
