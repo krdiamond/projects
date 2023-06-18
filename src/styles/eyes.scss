@@ -43,8 +43,10 @@
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
+    transition: left 0.3s ease, top 0.3s ease;
     border-radius: 50%;
     @media screen and (min-width: $break--tblt) {
+      transition: unset;
       height: calc(23px + (40 - 23) * ((100vw - 768px) / (2000 - 768)));
       width: calc(23px + (40 - 23) * ((100vw - 768px) / (2000 - 768)));
     }
