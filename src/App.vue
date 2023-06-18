@@ -29,26 +29,6 @@ export default {
       }
   },
   mounted() {
-    const textStyle = [
-  'color: red',
-  'font-size: 30px',
-  ].join(';');
-const imageStyle = [
-  'background-image: url("https://media.giphy.com/media/sXOj0wtpyELdu/source.gif")',
-  'background-size: cover',
-  'padding: 150px 300px'
-  ].join(';');
-// it's just a joke 😸
-console.log('%cYou have 6 seconds to count all the cats', textStyle);
-setTimeout(function() {
-  console.log('%c ', imageStyle);
-}, 3000);
-setTimeout(function() {
-  console.clear();
-}, 9000);
-
-
-
       this.updateWindowSize();
       window.addEventListener("resize", this.updateWindowSize);
   },
