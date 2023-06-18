@@ -46,9 +46,7 @@ export default {
       window.addEventListener("resize", this.updateWindowSize);
   },
   methods: {
-    updateWindowSize() {
-     console.log('updated window size')
-    },
+    updateWindowSize() {},
   },
 }
 </script>

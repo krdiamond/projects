@@ -1,5 +1,5 @@
 # Kristina Diamond
-![Kristina Diamond](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif https://krdiamond.github.io/portfolio//KristinaDiamond.gif)
+![Kristina Diamond](https://krdiamond.github.io/portfolio//KristinaDiamond.gif)
 
 
 
