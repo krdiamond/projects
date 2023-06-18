@@ -1,17 +1,5 @@
 <<<<<<< HEAD
-# Kristina Diamond
-
 ![Kristina Diamond](KristinaDiamond.png)
-=======
-<h1 style="text-align: center;">Kristina Diamond</h1>
-<p align="center">
-  <img src="KristinaDiamond.gif">
-</p>
-
-
-
-
->>>>>>> 8e91b7011fd7b2f2f429f7cbdeec31fbefc7d970
 
 <!-- ## Project setup
 ```
