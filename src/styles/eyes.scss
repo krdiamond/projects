@@ -41,7 +41,7 @@
   }
   
   .eye--left {
-    left: 38px;
+    left: 30px;
     @media screen and (min-width: $break--tblt) {
       left: calc(45px + (80 - 45) * ((100vw - 768px) / (2000 - 768)));
     }
