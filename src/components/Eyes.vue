@@ -1,10 +1,10 @@
 <template>
   <div @click="blink()">
     <div ref="leftEye" class="eye eye--left js-eye" :class="{ 'blink': blinking, 'openEye': !blinking }" >
-      <div class="pupil js-pupil"></div>
+      <div class="pupil js-pupil" :class="{ 'touchPupil': isTouchDevice }"></div>
     </div>
     <div ref="rightEye" class="eye eye--right js-eye" :class="{ 'blink': blinking, 'openEye': !blinking}">
-      <div class="pupil js-pupil"></div>
+      <div class="pupil js-pupil" :class="{ 'touchPupil': isTouchDevice }"></div>
     </div>
   </div>
 </template>
