@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <div class="eye eye--left js-eye" ref="leftEye">
+  <div @click="blink()">
+    <div ref="leftEye" class="eye eye--left js-eye" :class="{ 'blink': blinking, 'openEye': !blinking }" >
       <div class="pupil js-pupil"></div>
     </div>
-    <div class="eye eye--right js-eye" ref="rightEye">
+    <div ref="rightEye" class="eye eye--right js-eye" :class="{ 'blink': blinking, 'openEye': !blinking}">
       <div class="pupil js-pupil"></div>
     </div>
   </div>
@@ -11,8 +11,29 @@
 
 <script>
 export default {
+  name: 'Eyes',
+  props: {
+    isTouchDevice: {
+      type: Boolean,
+    },
+  },
+  data() {
+      return {
+        blinking: false,
+      };
+  },
   mounted() {
-    const eyes = [this.$refs.leftEye, this.$refs.rightEye];
+    this.eyes();
+  },
+  methods: {
+    blink(){
+      this.blinking = true;
+      setTimeout(() => {
+        this.blinking = false;
+        }, 500);
+    },
+    eyes() {
+      const eyes = [this.$refs.leftEye, this.$refs.rightEye];
     const pupils = document.querySelectorAll(".js-pupil");
     const eyeRadius = 40; // pupil max position - percentage from center
     const maxPupilDistanceFromCenter = 45; // pupil max position - percentage from center
@@ -58,6 +79,7 @@ export default {
     }
 
     document.addEventListener("mousemove", moveEyes);
+    },
   },
 };
 </script>

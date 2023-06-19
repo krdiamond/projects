@@ -3,7 +3,10 @@
   <div class="main-border position--fixed">
     <ConfettiContainer 
     :height="windowHeight" :width="windowWidth" class="position--relative pointer-events--none" :class="{ 'z-index--2': projects }"/>
-    <Home @open-portfolio="openPortfolio()" class="position--absolute top--0"/>
+    <Home 
+      @open-portfolio="openPortfolio()" 
+      :isTouchDevice="isTouchDevice"
+      class="position--absolute top--0"/>
     <Portfolio 
       v-if="projects" 
       @close-portfolio="closePortfolio()"

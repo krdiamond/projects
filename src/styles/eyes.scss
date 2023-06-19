@@ -27,6 +27,18 @@
       width: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
     }
   }
+
+  .blink {
+    height: 0px;
+    margin-top: 15px;
+    @media screen and (min-width: $break--tblt){
+      margin-top: 50px;
+    }
+  }
+
+  .openEye {
+    transition: height 0.5s ease, margin-top 0.5s ease;
+  }
   
   .eye--left {
     left: 38px;
@@ -46,7 +58,7 @@
     transition: left 0.3s ease, top 0.3s ease;
     border-radius: 50%;
     @media screen and (min-width: $break--tblt) {
-      transition: left 0.1s ease, top 0.1s ease;
+      transition: unset;
       height: calc(23px + (40 - 23) * ((100vw - 768px) / (2000 - 768)));
       width: calc(23px + (40 - 23) * ((100vw - 768px) / (2000 - 768)));
     }

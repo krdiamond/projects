@@ -1,7 +1,7 @@
 <template>
   <div ref="main" class="home container margin--20 flex flex--col align--center justify--center"> 
       <header class="position--relative">
-        <Eyes class="eyes position--absolute"/>
+        <Eyes :isTouchDevice="isTouchDevice" class="eyes position--absolute"/>
         <h1 class="flex flex--col position--relative">
             <span >KRISTINA</span>
             <span class="space_x1">DIAMOND</span>
@@ -35,6 +35,11 @@ export default {
   components: {
     BouncingIcons,
     Eyes,
+  },
+  props: {
+    isTouchDevice: {
+      type: Boolean,
+    },
   },
   data() {
       return {};
