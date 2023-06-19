@@ -35,10 +35,19 @@
 .underline-animation:hover {
     background-image: url('../assets/wavy.svg');
     background-position: 0 100%;
-    background-size: auto 18px;
+    background-size: auto 40px;
     background-repeat: repeat-x;
     text-decoration: none;
-    animation: slideleft 2000s infinite linear;
+    animation: slideleft 500s infinite linear;
+  }
+
+  .mini-underline-animation:hover {
+    background-image: url('../assets/wavy.svg');
+    background-position: 0 100%;
+    background-size: auto 15px;
+    background-repeat: repeat-x;
+    text-decoration: none;
+    animation: slideleft 500s infinite linear;
   }
 
 @keyframes slideleft {
@@ -255,6 +264,9 @@ button {
     &--1 {
         z-index: 1;
     }
+    &--2 {
+        z-index: 2;
+    }
 }
 
 .height {
@@ -301,6 +313,13 @@ a:visited, a:-webkit-any-link {
 /* Hide the scrollbar */
 ::-webkit-scrollbar {
     width: 0px;
-  }
+}
+
+.pointer-events {
+    &--none {
+        pointer-events: none;
+    }
+}
+
   
   

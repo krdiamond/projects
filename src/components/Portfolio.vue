@@ -7,7 +7,7 @@
               <h3>{{project.position}}</h3>
               <p>{{project.details}}</p>
               <h5> 
-                <span v-if="project.agency">While @ <a v-if="project.agencyURL" target="_blank" :href="project.agencyURL" class="underline-animation">{{project.agency}}, </a></span> 
+                <span v-if="project.agency">While @ <a v-if="project.agencyURL" target="_blank" :href="project.agencyURL" class="mini-underline-animation">{{project.agency}}</a>,</span> 
                 <span v-if="project.launchDate">{{project.launchDate}}</span>
               </h5>
           </div> 
