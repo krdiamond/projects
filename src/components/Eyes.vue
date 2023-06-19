@@ -3,7 +3,6 @@
     <div class="eye eye--left js-eye" ref="leftEye">
       <div class="pupil js-pupil"></div>
     </div>
-
     <div class="eye eye--right js-eye" ref="rightEye">
       <div class="pupil js-pupil"></div>
     </div>

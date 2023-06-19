@@ -1,7 +1,7 @@
 <template>
   <div ref="main" class="home container margin--20 flex flex--col align--center justify--center"> 
       <header class="position--relative">
-        <Eyes v-if="horizontalLayout == false" class="eyes position--absolute"/>
+        <Eyes class="eyes position--absolute"/>
         <h1 class="flex flex--col position--relative">
             <span >KRISTINA</span>
             <span class="space_x1">DIAMOND</span>
@@ -37,9 +37,7 @@ export default {
     Eyes,
   },
   data() {
-      return {
-        horizontalLayout: false,
-      };
+      return {};
     },
   mounted() {
       this.updateWindowSize();
