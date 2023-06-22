@@ -29,33 +29,6 @@
   height: 100%;
 }
 
-
-// --------------------------------- HOVER ANIMATION --------------------------------- //
-
-
-.underline-animation:hover {
-    background-image: url('../assets/wavy.svg');
-    background-position: 0 100%;
-    background-size: auto 40px;
-    background-repeat: repeat-x;
-    text-decoration: none;
-    animation: slideleft 500s infinite linear;
-  }
-
-  .mini-underline-animation:hover {
-    background-image: url('../assets/wavy.svg');
-    background-position: 0 100%;
-    background-size: auto 15px;
-    background-repeat: repeat-x;
-    text-decoration: none;
-    animation: slideleft 1500s infinite linear;
-  }
-
-@keyframes slideleft {
-    from { background-position-x: -200px; }
-    to { background-position-x: -90000px; }
-  }
-
 // --------------------------------- BUTTONS --------------------------------- //
 
 
