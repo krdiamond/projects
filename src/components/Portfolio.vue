@@ -29,6 +29,13 @@ export default {
       return {
         projects: [
           {
+            brand: 'Chomps',
+            brandURL: 'https://chomps.com/',
+            position: 'Front End Developer',
+            details: 'Shopify+, Recharge, Shopify Scripts', 
+            launchDate: '2023'
+          },  
+          {
             brand: 'OSSA New York',
             brandURL: 'https://www.ossanewyork.com/',
             position: 'Front End Developer',
@@ -54,9 +61,9 @@ export default {
             brandURL: 'https://hangar9.ca/',
             position: 'Front End Developer',
             details: 'Shopify',
-            launchDate: '2023',
             agency: 'Driver Digital',
             agencyURL: 'https://driver-digital.com/',
+            launchDate: ' 2023',
           },
           {
             brand: 'Hanky Panky',
@@ -65,7 +72,7 @@ export default {
             details: 'Shopify+',
             agency: 'Driver Digital',
             agencyURL: 'https://driver-digital.com/',
-            launchDate: '2023'
+            launchDate: ' 2023'
           },
           {
             brand: 'Chilisleep',
@@ -101,7 +108,7 @@ export default {
             details: 'Shopify+',
             agency: 'Sweden Unlimited',
             agencyURL: 'https://swedenunlimited.com/',
-            launchDate: '2021'
+            launchDate: ' 2021'
           },
           {
             brand: 'MahZeDahr',
@@ -110,7 +117,7 @@ export default {
             details: 'Shopify+, ReCharge',
             agency: 'Sweden Unlimited',
             agencyURL: 'https://swedenunlimited.com/',
-            launchDate: '2021'
+            launchDate: ' 2021'
           },
           {
             brand: 'Monrow',
@@ -119,7 +126,7 @@ export default {
             details: 'Shopify+',
             agency: 'Sweden Unlimited',
             agencyURL: 'https://swedenunlimited.com/',
-            launchDate: '2021'
+            launchDate: ' 2021'
           },
           {
             brand: 'Pat Mcgrath Labs',
@@ -128,7 +135,7 @@ export default {
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'Bala Bangles',
@@ -268,7 +275,7 @@ export default {
             details: 'Shopify+, GSAP',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: '2019'
+            launchDate: ' 2019'
           },
           {
             brand: 'Greats',
@@ -277,7 +284,7 @@ export default {
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: '2018'
+            launchDate: ' 2018'
           },
           {
             brand: 'The Sak',
@@ -286,7 +293,7 @@ export default {
             details: 'Shopify+, Excel large inventory organization',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: '2018'
+            launchDate: ' 2018'
           },
           {
             brand: 'Paul Evans',
@@ -295,7 +302,7 @@ export default {
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: '2018'
+            launchDate: ' 2018'
           },
           {
             brand: 'Carhartt WIP',
@@ -313,7 +320,7 @@ export default {
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: '2018'
+            launchDate: ' 2018'
           }
           
         ]        
