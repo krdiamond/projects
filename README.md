@@ -22,7 +22,7 @@ npm run lint
 
 ### Launch to Github Pages
 ```
-git branch -d gh-pages
+git branch -D gh-pages
 git push origin --delete gh-pages
 npm run build
 git add dist && git commit -m 'adding dist subtree'

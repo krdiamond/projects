@@ -144,7 +144,7 @@ export default {
             details: 'Shopify+',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'Radswan',
@@ -153,7 +153,7 @@ export default {
             details: 'Shopify+',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'Aavrani',
@@ -162,7 +162,7 @@ export default {
             details: 'Shopify',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'HeTime',
@@ -171,7 +171,7 @@ export default {
             details: 'Shopify+, ReCharge',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'Ohza',
@@ -180,7 +180,7 @@ export default {
             details: 'Shopify+',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'Olo',
@@ -189,7 +189,7 @@ export default {
             details: 'Shopify',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'Vanessa Lundborg',
@@ -198,7 +198,7 @@ export default {
             details: 'Webflow',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'Rachel Lynn x Corri Lynn',
@@ -214,7 +214,7 @@ export default {
             details: 'Shopify',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'Grabanzos',
@@ -223,7 +223,7 @@ export default {
             details: 'Shopify',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'Kolsvart',
@@ -232,7 +232,7 @@ export default {
             details: 'Shopify+',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'Popup Mob',
@@ -241,7 +241,7 @@ export default {
             details: 'Webflow',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'Oral7',
@@ -250,7 +250,7 @@ export default {
             details: 'Shopify, Yotpo',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'Vive Sana',
@@ -259,7 +259,7 @@ export default {
             details: 'Shopify',
             agency: 'Lustre',
             agencyURL: 'https://www.lustre.nyc/',
-            launchDate: '2020'
+            launchDate: ' 2020'
           },
           {
             brand: 'Come Tees',
@@ -311,7 +311,7 @@ export default {
             details: 'Shopify+',
             agency: 'Verbal + Visual',
             agencyURL: 'https://verbalplusvisual.com/',
-            launchDate: '2018'
+            launchDate: ' 2018'
           },
           {
             brand: 'Irving Farm',
