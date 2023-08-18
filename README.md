@@ -27,4 +27,5 @@ git push origin --delete gh-pages
 npm run build
 git add dist && git commit -m 'adding dist subtree'
 git subtree push --prefix dist origin gh-pages
+On Github, re add the domain name www.kristinadiamond.com
 ```
