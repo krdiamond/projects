@@ -5,7 +5,7 @@
       font-family: 'Archivo-Black', Arial, sans-serif;
       letter-spacing: 0.22em;
       line-height: 1;
-      font-size: 18px;
+      font-size: 10vmin;
       @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
         font-size: calc(18px + (30 - 18) * ((100vw - 200px) / (350 - 200)));
       }

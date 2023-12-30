@@ -29,3 +29,7 @@ git add dist && git commit -m 'adding dist subtree'
 git subtree push --prefix dist origin gh-pages
 On Github, re add the domain name www.kristinadiamond.com
 ```
+
+### TO DO
+- Update Text to use 20vmin, see how this works
+- Add filters to the portfolio page somehow
