@@ -33,28 +33,56 @@ export default {
             brandURL: 'https://chomps.com/',
             position: 'Front End Developer',
             details: 'Shopify+, Recharge, Shopify Scripts', 
-            launchDate: '2023'
+            launchDate: '2026'
           },  
+          {
+            brand: 'Big Night',
+            brandURL: 'https://bignightbk.com/',
+            position: 'Front End Developer',
+            details: 'Shopify, Recharge, Shopify Scripts', 
+            launchDate: '2026'
+          }, 
           {
             brand: 'OSSA New York',
             brandURL: 'https://www.ossanewyork.com/',
             position: 'Front End Developer',
             details: 'Shopify',
-            launchDate: '2023'
+            launchDate: '2026'
           },
+          {
+            brand: 'Routine Pleasure',
+            brandURL: 'https://www.routinepleasure.com/',
+            position: 'Front End Developer',
+            details: 'Shopify', 
+            launchDate: '2026'
+          }, 
+          {
+            brand: 'Generosity Roundtable',
+            brandURL: 'https://www.generosityspectrum.org/',
+            position: 'Front End Developer',
+            details: 'Shopify',
+            launchDate: '2026'
+          },
+           {
+            brand: 'GoodCleanLove',
+            brandURL: 'https://goodcleanlove.com/',
+            position: 'Front End Developer',
+            details: 'Shopify, Shopify Scripts', 
+            launchDate: '2026'
+          }, 
           {
             brand: 'Plant People',
             brandURL: 'https://www.plantpeople.co/',
             position: 'Front End Developer',
             details: 'Shopify+, ReCharge, Shopify Scripts',
-            launchDate: '2023'
+            launchDate: '2025'
           },
           {
             brand: 'Sleep.me',
             brandURL: 'https://sleep.me/',
             position: 'Front End Developer',
             details: 'Nuxt, Vue, Shopify+, Headless, Headless ReCharge, Shopify Scripts, Extend & Affirm',
-            launchDate: '2023'
+            launchDate: '2024'
           },
           {
             brand: 'Hangar9',
@@ -85,7 +113,7 @@ export default {
             brandURL: 'https://rosettagetty.com/',
             position: 'Front End Developer',
             details: 'Shopify',
-            launchDate: '2021'
+            launchDate: '2022'
           },
           {
             brand: 'Woosh Beauty',

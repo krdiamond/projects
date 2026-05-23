@@ -20,7 +20,7 @@
                 </span>
             </span>
         </button>
-        <BouncingIcons class="padding-top--12"/>
+        <!-- <BouncingIcons class="padding-top--12"/> -->
       </section>
   </div>
 </template>
