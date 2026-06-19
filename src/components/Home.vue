@@ -27,13 +27,11 @@
 
 <script>
 
-import BouncingIcons from "../components/BouncingIcons";
 import Eyes from "../components/Eyes";
 
 export default {
   name: 'Home',
   components: {
-    BouncingIcons,
     Eyes,
   },
   props: {

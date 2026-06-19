@@ -20,12 +20,18 @@ npm run build
 npm run lint
 ```
 
-### Launch to Github Pages
+### Deploy to GitHub Pages
+
+Pushes to `main` deploy automatically via `.github/workflows/deploy-pages.yml`.
+
+To deploy manually:
+
 ```
-git branch -D gh-pages
-git push origin --delete gh-pages
+npm install
 npm run build
-git add dist && git commit -m 'adding dist subtree'
-git subtree push --prefix dist origin gh-pages
-On Github, re add the domain name www.kristinadiamond.com
+git push origin main
 ```
+
+Or trigger **Actions → Deploy to GitHub Pages → Run workflow** in the GitHub UI.
+
+Custom domain: `www.kristinadiamond.com` (configured via `public/CNAME` and GitHub Pages settings).
