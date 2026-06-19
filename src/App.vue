@@ -5,11 +5,16 @@
     :height="windowHeight" :width="windowWidth" class="position--relative pointer-events--none" :class="{ 'z-index--2': projects }"/>
     <Home 
       @open-portfolio="openPortfolio()" 
+      @open-email="openEmail()" 
       :isTouchDevice="isTouchDevice"
       class="position--absolute top--0"/>
     <Portfolio 
       v-if="projects" 
       @close-portfolio="closePortfolio()"
+    />
+    <Email 
+      v-if="email" 
+      @close-portfolio="closeEmail()"
     />
   </div>
 </template>
@@ -18,18 +23,20 @@
 
 import Home from './components/Home.vue'
 import Portfolio from './components/Portfolio.vue'
+import Email from './components/Email.vue'
 import ConfettiContainer from './components/ConfettiContainer.vue'
 
 export default {
   name: 'App',
   components: {
     Home,
-    Portfolio,
+    Portfolio, Email,
     ConfettiContainer,
   },
   data() {
       return {
         projects: false,
+        email: false,
         isTouchDevice: false,
         windowHeight: 0,
         windowWidth:0,
@@ -56,6 +63,19 @@ export default {
       else {
         this.projects = true;
       }
+    },
+    openEmail() {
+      if (this.isTouchDevice === true) {
+        setTimeout(() => {
+        this.email = true;
+        }, 520);
+      }
+      else {
+        this.email = true;
+      }
+    },
+    closeEmail() {
+        this.email = false;
     },
     closePortfolio() {
         this.projects = false;
