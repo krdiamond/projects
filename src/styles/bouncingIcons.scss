@@ -1,55 +1,34 @@
-@import '_variables.scss'; 
-
-
+.bouncing-icon {
+  position: fixed;
+  z-index: 1;
+}
 
 .box {
-    transition: width 0.1s ease, height 0.1s ease;
-    width: 20px;
-    height: 20px;
-    animation: float 5s ease-in-out infinite; /*Applies the float keyframe animation over 5s and makes it run infinitely.*/
-    @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
-      height: calc(20px + (40 - 20) * ((100vw - 200px) / (350 - 200)));
-      width: calc(20px + (40 - 20) * ((100vw - 200px) / (350 - 200)));
-    }
-    @media screen and (min-width: $break--mbl--sm){
-      height: 35px;
-      width: 35px;
-    }
-    @media screen and (min-width: $break--tblt){
-      margin-top: 20px;
-      height: calc(50px + (80 - 50) * ((100vw - 768px) / (2000 - 768)));
-      width: calc(50px + (80 - 50) * ((100vw - 768px) / (2000 - 768)));
-    }
+  transition: width 0.1s ease, height 0.1s ease;
+  width: 50px;
+  height: 50px;
+  animation: float 5s ease-in-out infinite;
 
+  button {
+    width: 100%;
+    height: 100%;
+    padding: 0;
   }
-
-  .ag-icon_item:first-child {
-    animation-delay: 2s;
-  }
-  .ag-icon_item:nth-child(2) {
-
-  }
-  .ag-icon_item:nth-child(3) {
-    animation-delay: 1s;
-  }
-  .ag-icon_item:last-child {
-    animation-delay: 3s;
-  }
+}
 
 img {
   width: 100%;
   height: 100%;
 }
 
-
 @keyframes float {
-  0%{
-      transform: translateY(0); /*The starting point of the animation is 0.*/
+  0% {
+    transform: translateY(0);
   }
-  50%{
-      transform: translateY(-10px); /*The middle point of the animation is -15xp. This will move the element up.*/
+  50% {
+    transform: translateY(-10px);
   }
-  100%{
-      transform: translateY(0); /*The last point of the animation is going back to the starting state of 0.*/
+  100% {
+    transform: translateY(0);
   }
 }
