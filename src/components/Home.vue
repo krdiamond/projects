@@ -20,7 +20,7 @@
                 </span>
             </span>
         </button>
-        <BouncingIcons id="BouncingIcons"/>
+        <BouncingIcons id="BouncingIcons" @click="$emit('open-email')"/>
       </section>
   </div>
 </template>

@@ -4,11 +4,7 @@
     class="bouncing-icon box"
     :style="{ top: `${position.top}px`, left: `${position.left}px` }"
   >
-    <button
-      type="button"
-      aria-label="Copy Kristina Diamond's email to your clipboard"
-      @click="copyToClipboard('krdiamond@gmail.com')"
-    >
+    <button type="button">
       <img
         title="Copy Kristina Diamond's email to your clipboard"
         :src="mailIcon"
@@ -208,16 +204,7 @@ export default {
       const height = el.offsetHeight;
       const obstacles = this.getObstacleRects();
       this.position = this.findValidPosition(width, height, obstacles);
-    },
-    copyToClipboard(text) {
-      navigator.clipboard.writeText(text)
-        .then(() => {
-          alert('✉️ krdiamond@gmail.com - copied to your clipboard');
-        })
-        .catch((error) => {
-          console.error('Failed to copy text: ', error);
-        });
-    },
-  },
+    }
+  }
 };
 </script>
