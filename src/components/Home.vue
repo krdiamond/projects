@@ -20,7 +20,7 @@
                 </span>
             </span>
         </button>
-        <!-- <BouncingIcons class="padding-top--12"/> -->
+        <BouncingIcons id="BouncingIcons"/>
       </section>
   </div>
 </template>
@@ -28,11 +28,12 @@
 <script>
 
 import Eyes from "../components/Eyes";
+import BouncingIcons from "../components/BouncingIcons";
 
 export default {
   name: 'Home',
   components: {
-    Eyes,
+    Eyes, BouncingIcons
   },
   props: {
     isTouchDevice: {
