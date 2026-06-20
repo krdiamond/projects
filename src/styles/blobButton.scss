@@ -27,14 +27,14 @@
       font-size: calc(24px + (36 - 24) * ((100vw - 768px) / (2000 - 768)));
     }
 
-    @media screen and (max-height: $break--height--short) {
+    @include media-narrow-short {
       margin-top: clamp(6px, 1.8vh, 15px);
       margin-bottom: clamp(6px, 1.8vh, 15px);
       font-size: clamp(10px, 2.8vh, 16px);
       padding: clamp(8px, 2vh, 13px);
     }
 
-    @media screen and (max-height: $break--height--xs) {
+    @include media-narrow-xs {
       margin-top: clamp(4px, 1.4vh, 10px);
       margin-bottom: clamp(4px, 1.4vh, 10px);
       font-size: clamp(9px, 2.4vh, 14px);
@@ -53,7 +53,7 @@
       @media screen and (min-width: $break--tblt) {
         border: 6px solid $blue;
       }
-      @media screen and (max-height: $break--height--short) {
+      @include media-narrow-short {
         border-width: 3px;
       }
     }

@@ -50,12 +50,12 @@
     }
   }
 
-  @media screen and (max-height: $break--height--short) {
+  @include media-narrow-short {
     font-size: clamp(9px, 2.8vh, 16px);
     padding: clamp(4px, 1.2vh, 8px) 0;
   }
 
-  @media screen and (max-height: $break--height--xs) {
+  @include media-narrow-xs {
     font-size: clamp(8px, 2.4vh, 13px);
     padding: clamp(3px, 1vh, 6px) 0;
   }

@@ -15,16 +15,24 @@
     --eye-size: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
   }
 
-  @media screen and (max-height: $break--height--short) {
+  @include media-narrow-short {
     right: clamp(12px, 3vw, 20px);
     top: clamp(-40px, -10vh, -58px);
     --eye-size: clamp(28px, 7vh, 40px);
   }
 
-  @media screen and (max-height: $break--height--xs) {
+  @include media-narrow-xs {
     right: clamp(10px, 2.5vw, 16px);
     top: clamp(-32px, -8.5vh, -44px);
     --eye-size: clamp(24px, 6vh, 32px);
+  }
+
+  @include media-wide-short {
+    top: clamp(
+      -150px,
+      calc(-110px + (-150 - -110) * ((100vw - 768px) / (2000 - 768))),
+      -16vh
+    );
   }
 
   .eye {
@@ -41,12 +49,12 @@
       margin-top: 20px;
     }
 
-    @media screen and (max-height: $break--height--short) {
+    @include media-narrow-short {
       border-width: clamp(2px, 0.6vh, 4px);
       margin-top: 0;
     }
 
-    @media screen and (max-height: $break--height--xs) {
+    @include media-narrow-xs {
       border-width: clamp(2px, 0.5vh, 3px);
     }
   }
@@ -58,11 +66,11 @@
       margin-top: 50px;
     }
 
-    @media screen and (max-height: $break--height--short) {
+    @include media-narrow-short {
       margin-top: clamp(8px, 2.5vh, 15px);
     }
 
-    @media screen and (max-height: $break--height--xs) {
+    @include media-narrow-xs {
       margin-top: clamp(6px, 2vh, 10px);
     }
   }
