@@ -232,7 +232,7 @@ export default {
       return Math.max(0, 1 - fadeProgress);
     },
     spawnTextBurst(x, y) {
-      const bubbles = 6;
+      const bubbles = 3;
       const fontSize = window.innerWidth < 768 ? 14 : 18;
       const marqueeTop = this.getMarqueeTop();
 
