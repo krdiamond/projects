@@ -1,0 +1,62 @@
+@import '_variables.scss';
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: 'Alata-Regular', Arial, sans-serif;
+  letter-spacing: 0.08em;
+  padding: 8px 0;
+  font-size: 10px;
+
+  @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
+    font-size: calc(10px + (16 - 10) * ((100vw - 200px) / (350 - 200)));
+  }
+
+  @media screen and (min-width: $break--mbl--sm) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: $break--tblt) {
+    font-size: calc(18px + (28 - 18) * ((100vw - 768px) / (2000 - 768)));
+    padding: 12px 0;
+  }
+
+  &__track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll var(--marquee-duration, 18s) linear infinite;
+    animation-play-state: var(--marquee-play-state, running);
+  }
+
+  &__content {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 2rem;
+    padding-right: 2rem;
+  }
+
+  &__measure {
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover .marquee__track {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-1 * var(--marquee-segment-width, 50%)));
+  }
+}

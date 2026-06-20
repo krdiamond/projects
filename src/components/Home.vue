@@ -1,5 +1,6 @@
 <template>
-  <div ref="main" class="home container margin--20 flex flex--col align--center justify--center"> 
+  <div class="container flex flex--col align--center justify--center overflow--unset">
+    <div ref="main" class="home container flex flex--col align--center justify--center overflow--unset"> 
       <header class="position--relative">
         <Eyes :isTouchDevice="isTouchDevice" class="eyes position--absolute"/>
         <h1 class="flex flex--col position--relative">
@@ -20,20 +21,24 @@
                 </span>
             </span>
         </button>
-        <BouncingIcons id="BouncingIcons" @click="$emit('open-email')"/>
+        <!-- <BouncingIcons id="BouncingIcons" @click="$emit('open-email')"/> -->
       </section>
+
   </div>
+      <Marquee/>
+  </div>
+  
 </template>
 
 <script>
 
 import Eyes from "../components/Eyes";
-import BouncingIcons from "../components/BouncingIcons";
+import Marquee from "../components/Marquee";
 
 export default {
   name: 'Home',
   components: {
-    Eyes, BouncingIcons
+    Eyes, Marquee
   },
   props: {
     isTouchDevice: {
