@@ -1,42 +1,113 @@
-@import '_variables.scss'; 
+@import '_variables.scss';
+
+.home-shell {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  &__content {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  &__marquee {
+    flex-shrink: 0;
+    width: 100%;
+  }
+}
 
 .home {
-    h1 {
-      font-family: 'Archivo-Black', Arial, sans-serif;
-      letter-spacing: 0.22em;
-      line-height: 1;
-      font-size: 18px;
-      @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
-        font-size: calc(18px + (30 - 18) * ((100vw - 200px) / (350 - 200)));
-      }
-      @media screen and (min-width: $break--mbl--sm) {
-        font-size: 30px;
-      }
+  h1 {
+    font-family: 'Archivo-Black', Arial, sans-serif;
+    letter-spacing: 0.22em;
+    line-height: 1;
+    font-size: 18px;
+    @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
+      font-size: calc(18px + (30 - 18) * ((100vw - 200px) / (350 - 200)));
+    }
+    @media screen and (min-width: $break--mbl--sm) {
+      font-size: 30px;
+    }
+    @media screen and (min-width: $break--tblt) {
+      font-size: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
+    }
+    span {
+      padding-left: 10px;
       @media screen and (min-width: $break--tblt) {
-        font-size: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
-      }
-      span {
-        padding-left: 10px;
-        @media screen and (min-width: $break--tblt) {
-          padding-left: 25px;
-        }
+        padding-left: 25px;
       }
     }
-      
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: fit-content;
+    max-width: 100%;
+
     p {
-      font-family: 'Alata-Regular', Arial, sans-serif;
-      font-size: 10px;
-      padding-top: 6px;
-      @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
-        font-size: calc(10px + (16 - 10) *  ((100vw - 200px) / (350 - 200)));
-      }
-      @media screen and (min-width: $break--mbl--sm) {
-        font-size: 16px;
-      }
-      @media screen and (min-width: $break--tblt) {
-        font-size: calc(30px + (48 - 30) * ((100vw - 768px) / (2000 - 768)));
+      padding-top: 0;
+    }
+
+    .blob-btn {
+      width: 100%;
+    }
+  }
+
+  p {
+    font-family: 'Alata-Regular', Arial, sans-serif;
+    font-size: 10px;
+    padding-top: 6px;
+    @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
+      font-size: calc(10px + (16 - 10) *  ((100vw - 200px) / (350 - 200)));
+    }
+    @media screen and (min-width: $break--mbl--sm) {
+      font-size: 16px;
+    }
+    @media screen and (min-width: $break--tblt) {
+      font-size: calc(30px + (48 - 30) * ((100vw - 768px) / (2000 - 768)));
+    }
+  }
+
+  @media screen and (max-height: $break--height--short) {
+    h1 {
+      font-size: clamp(16px, 5.5vh, 30px);
+
+      span {
+        padding-left: clamp(6px, 1.5vh, 10px);
       }
     }
-      
-      
+
+    p {
+      font-size: clamp(9px, 2.8vh, 16px);
+      padding-top: clamp(3px, 1vh, 6px);
+    }
+  }
+
+  @media screen and (max-height: $break--height--xs) {
+    h1 {
+      font-size: clamp(14px, 4.8vh, 22px);
+    }
+
+    p {
+      font-size: clamp(8px, 2.4vh, 13px);
+      padding-top: clamp(2px, 0.8vh, 4px);
+    }
+  }
+}
+
+@media screen and (max-height: $break--height--short) {
+  .home-shell__content {
+    padding-top: clamp(28px, 9vh, 58px);
+    padding-bottom: clamp(4px, 1.5vh, 12px);
+  }
+}
+
+@media screen and (max-height: $break--height--xs) {
+  .home-shell__content {
+    padding-top: clamp(22px, 8vh, 40px);
+    padding-bottom: clamp(2px, 1vh, 8px);
+  }
 }

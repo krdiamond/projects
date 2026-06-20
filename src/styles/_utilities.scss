@@ -17,10 +17,17 @@
     color: $blue;
     text-align: center;
     min-width: 160px;
+    overflow: hidden;
     border: 5px solid $blue;
     @media screen and (min-width: $break--tblt) {
       border: 6px solid $blue;
     }
+}
+
+html,
+body,
+#app {
+  height: 100%;
 }
 
 .container {
@@ -46,6 +53,13 @@ button {
     }
     &--row {
         flex-direction: row;
+    }
+    &--1 {
+        flex: 1 1 0;
+        min-height: 0;
+    }
+    &--shrink-0 {
+        flex-shrink: 0;
     }
 }
 

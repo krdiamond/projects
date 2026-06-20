@@ -3,12 +3,28 @@
 
 
 .eyes {
+  --eye-size: 40px;
+  --eye-overlap-ratio: 0.25;
+
   right: 20px;
   top: -58px;
   rotate: 26deg;
   @media screen and (min-width: $break--tblt) {
     right: 30px;
     top: calc(-110px + (-150 - -110) * ((100vw - 768px) / (2000 - 768)));
+    --eye-size: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
+  }
+
+  @media screen and (max-height: $break--height--short) {
+    right: clamp(12px, 3vw, 20px);
+    top: clamp(-40px, -10vh, -58px);
+    --eye-size: clamp(28px, 7vh, 40px);
+  }
+
+  @media screen and (max-height: $break--height--xs) {
+    right: clamp(10px, 2.5vw, 16px);
+    top: clamp(-32px, -8.5vh, -44px);
+    --eye-size: clamp(24px, 6vh, 32px);
   }
 
   .eye {
@@ -17,14 +33,21 @@
     border-radius: 50%;
     overflow: hidden;
     -webkit-mask-image: -webkit-radial-gradient(white, black); /* fix for safari overflow:hidden and border radius */
-    width: 40px;
-    height: 40px;
+    width: var(--eye-size);
+    height: var(--eye-size);
     border: 4px solid $blue;
     @media screen and (min-width: $break--tblt){
       border: 6px solid $blue;
       margin-top: 20px;
-      height: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
-      width: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
+    }
+
+    @media screen and (max-height: $break--height--short) {
+      border-width: clamp(2px, 0.6vh, 4px);
+      margin-top: 0;
+    }
+
+    @media screen and (max-height: $break--height--xs) {
+      border-width: clamp(2px, 0.5vh, 3px);
     }
   }
 
@@ -34,32 +57,37 @@
     @media screen and (min-width: $break--tblt){
       margin-top: 50px;
     }
+
+    @media screen and (max-height: $break--height--short) {
+      margin-top: clamp(8px, 2.5vh, 15px);
+    }
+
+    @media screen and (max-height: $break--height--xs) {
+      margin-top: clamp(6px, 2vh, 10px);
+    }
   }
 
   .openEye {
     transition: height 0.5s ease, margin-top 0.5s ease;
   }
+
+  .eye--right {
+    z-index: 1;
+  }
   
   .eye--left {
-    left: 30px;
-    @media screen and (min-width: $break--tblt) {
-      left: calc(45px + (80 - 45) * ((100vw - 768px) / (2000 - 768)));
-    }
+    left: calc(var(--eye-size) * (1 - var(--eye-overlap-ratio)));
   }
   
   .pupil {
-    width: 18px;
-    height: 18px;
+    width: 45%;
+    height: 45%;
     background-color: $blue;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     border-radius: 50%;
-    @media screen and (min-width: $break--tblt) {
-      height: calc(23px + (40 - 23) * ((100vw - 768px) / (2000 - 768)));
-      width: calc(23px + (40 - 23) * ((100vw - 768px) / (2000 - 768)));
-    }
   }
 
   .touchPupil {
@@ -68,19 +96,13 @@
   
   .pupil:after {
     content: "";
-    width: 5px;
-    height: 5px;
+    width: 28%;
+    height: 28%;
     border-radius: 50%;
     position: absolute;
-    top: 5px;
-    right: 2px;
+    top: 28%;
+    right: 11%;
     background-color: white;
-    @media screen and (min-width: $break--tblt) {
-      height: calc(5px + (13 - 5) * ((100vw - 768px) / (2000 - 768)));
-      width: calc(5px + (13 - 5) * ((100vw - 768px) / (2000 - 768)));
-      top: 5px;
-      right: 10px;
-    }
   }
 
 }

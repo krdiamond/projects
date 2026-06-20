@@ -34,51 +34,49 @@ export default {
     },
     eyes() {
       const eyes = [this.$refs.leftEye, this.$refs.rightEye];
-    const pupils = document.querySelectorAll(".js-pupil");
-    const eyeRadius = 40; // pupil max position - percentage from center
-    const maxPupilDistanceFromCenter = 45; // pupil max position - percentage from center
+      const pupils = this.$el.querySelectorAll(".js-pupil");
+      // Pupil is 45% of eye diameter (see eyes.scss); keep entire circle inside eye.
+      const pupilSizePercent = 45;
+      const maxPupilDistanceFromCenter = 50 - pupilSizePercent / 2;
 
-    function moveEyes(event) {
-      let offset = rightBetweenTheEyes(eyes);
-      let x = (event.clientX - offset.x) / window.innerWidth * 100;
-      let y = (event.clientY - offset.y) / window.innerHeight * 100;
-      let pupilDistanceFromCenter = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+      let lastEvent = {
+        clientX: window.innerWidth / 2,
+        clientY: window.innerHeight / 2,
+      };
 
-      if (pupilDistanceFromCenter >= maxPupilDistanceFromCenter) {
-        // if pupil out of eye - don't panic
-        let angle = Math.atan(x / y);
-        let adjustedX = Math.sin(angle) * maxPupilDistanceFromCenter;
-        let adjustedY = Math.cos(angle) * maxPupilDistanceFromCenter;
+      function centerBetweenEyes(eyeEls) {
+        const rect0 = eyeEls[0].getBoundingClientRect();
+        const rect1 = eyeEls[1].getBoundingClientRect();
+        return {
+          x: (rect0.left + rect0.right + rect1.left + rect1.right) / 4,
+          y: (rect0.top + rect0.bottom + rect1.top + rect1.bottom) / 4,
+        };
+      }
 
-        if (y < 0) {
-          x = adjustedX * -1;
-          y = adjustedY * -1;
-        } else {
+      function moveEyes(event) {
+        lastEvent = event;
+        const offset = centerBetweenEyes(eyes);
+        let x = ((event.clientX - offset.x) / window.innerWidth) * 100;
+        let y = ((event.clientY - offset.y) / window.innerHeight) * 100;
+        const pupilDistanceFromCenter = Math.sqrt(x * x + y * y);
+
+        if (pupilDistanceFromCenter >= maxPupilDistanceFromCenter) {
+          const angle = Math.atan2(x, y);
+          const adjustedX = Math.sin(angle) * maxPupilDistanceFromCenter;
+          const adjustedY = Math.cos(angle) * maxPupilDistanceFromCenter;
           x = adjustedX;
           y = adjustedY;
         }
+
+        pupils.forEach((p) => {
+          p.style.left = x + 50 + "%";
+          p.style.top = y + 50 + "%";
+        });
       }
 
-      pupils.forEach((p) => {
-        p.style.left = x + 50 + "%"; // 50 is because 50% is CSS center
-        p.style.top = y + 50 + "%";
-      });
-    }
-
-    function rightBetweenTheEyes(eyes) {
-      let offset = { x: 0, y: 0 };
-      let eye0Left = eyes[0].getBoundingClientRect().left;
-      let eye0Top = eyes[0].getBoundingClientRect().top;
-      let eye1Left = eyes[1].getBoundingClientRect().left;
-      let eye1Top = eyes[1].getBoundingClientRect().top;
-
-      offset.x = (eye0Left + eye1Left) / 2 + eyeRadius;
-      offset.y = (eye0Top + eye1Top) / 2 + eyeRadius;
-
-      return offset;
-    }
-
-    document.addEventListener("mousemove", moveEyes);
+      document.addEventListener("mousemove", moveEyes);
+      window.addEventListener("resize", () => moveEyes(lastEvent));
+      moveEyes(lastEvent);
     },
   },
 };

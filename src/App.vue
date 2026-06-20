@@ -12,7 +12,7 @@
       @open-portfolio="openPortfolio()" 
       @open-email="openEmail()" 
       :isTouchDevice="isTouchDevice"
-      class="position--absolute top--0"/>
+      class="position--absolute top--0 width--full height--full"/>
     <Portfolio 
       v-if="projects" 
       @close-portfolio="closePortfolio()"
