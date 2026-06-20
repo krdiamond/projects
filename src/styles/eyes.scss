@@ -11,6 +11,16 @@
     top: calc(-110px + (-150 - -110) * ((100vw - 768px) / (2000 - 768)));
   }
 
+  @media screen and (max-height: $break--height--short) {
+    right: clamp(12px, 3vw, 20px);
+    top: clamp(-40px, -10vh, -58px);
+  }
+
+  @media screen and (max-height: $break--height--xs) {
+    right: clamp(10px, 2.5vw, 16px);
+    top: clamp(-32px, -8.5vh, -44px);
+  }
+
   .eye {
     position: absolute;
     background-color: white;
@@ -26,6 +36,19 @@
       height: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
       width: calc(60px + (100 - 60) * ((100vw - 768px) / (2000 - 768)));
     }
+
+    @media screen and (max-height: $break--height--short) {
+      width: clamp(28px, 7vh, 40px);
+      height: clamp(28px, 7vh, 40px);
+      border-width: clamp(2px, 0.6vh, 4px);
+      margin-top: 0;
+    }
+
+    @media screen and (max-height: $break--height--xs) {
+      width: clamp(24px, 6vh, 32px);
+      height: clamp(24px, 6vh, 32px);
+      border-width: clamp(2px, 0.5vh, 3px);
+    }
   }
 
   .blink {
@@ -33,6 +56,14 @@
     margin-top: 15px;
     @media screen and (min-width: $break--tblt){
       margin-top: 50px;
+    }
+
+    @media screen and (max-height: $break--height--short) {
+      margin-top: clamp(8px, 2.5vh, 15px);
+    }
+
+    @media screen and (max-height: $break--height--xs) {
+      margin-top: clamp(6px, 2vh, 10px);
     }
   }
 
@@ -45,21 +76,25 @@
     @media screen and (min-width: $break--tblt) {
       left: calc(45px + (80 - 45) * ((100vw - 768px) / (2000 - 768)));
     }
+
+    @media screen and (max-height: $break--height--short) {
+      left: clamp(18px, 5vw, 30px);
+    }
+
+    @media screen and (max-height: $break--height--xs) {
+      left: clamp(14px, 4vw, 22px);
+    }
   }
   
   .pupil {
-    width: 18px;
-    height: 18px;
+    width: 45%;
+    height: 45%;
     background-color: $blue;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     border-radius: 50%;
-    @media screen and (min-width: $break--tblt) {
-      height: calc(23px + (40 - 23) * ((100vw - 768px) / (2000 - 768)));
-      width: calc(23px + (40 - 23) * ((100vw - 768px) / (2000 - 768)));
-    }
   }
 
   .touchPupil {
@@ -68,19 +103,13 @@
   
   .pupil:after {
     content: "";
-    width: 5px;
-    height: 5px;
+    width: 28%;
+    height: 28%;
     border-radius: 50%;
     position: absolute;
-    top: 5px;
-    right: 2px;
+    top: 28%;
+    right: 11%;
     background-color: white;
-    @media screen and (min-width: $break--tblt) {
-      height: calc(5px + (13 - 5) * ((100vw - 768px) / (2000 - 768)));
-      width: calc(5px + (13 - 5) * ((100vw - 768px) / (2000 - 768)));
-      top: 5px;
-      right: 10px;
-    }
   }
 
 }

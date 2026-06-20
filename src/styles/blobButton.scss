@@ -30,6 +30,22 @@
       width: calc(300px + (500 - 300) * ((100vw - 768px) / (2000 - 768)));
       font-size: calc(24px + (36 - 24) * ((100vw - 768px) / (2000 - 768)));
     }
+
+    @media screen and (max-height: $break--height--short) {
+      margin-top: clamp(6px, 1.8vh, 15px);
+      margin-bottom: clamp(6px, 1.8vh, 15px);
+      width: clamp(100px, 28vw, 200px);
+      font-size: clamp(10px, 2.8vh, 16px);
+      padding: clamp(8px, 2vh, 13px);
+    }
+
+    @media screen and (max-height: $break--height--xs) {
+      margin-top: clamp(4px, 1.4vh, 10px);
+      margin-bottom: clamp(4px, 1.4vh, 10px);
+      width: clamp(90px, 26vw, 160px);
+      font-size: clamp(9px, 2.4vh, 14px);
+      padding: clamp(6px, 1.6vh, 10px);
+    }
     
     &:before {
       content: "";
