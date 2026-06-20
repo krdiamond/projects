@@ -15,26 +15,21 @@
     padding: 13px;
     margin-top: 15px;
     margin-bottom: 15px;
-    width: 120px;
     @media screen and (min-width: $break--min) and (max-width: $break--mbl--sm) {
       margin-bottom: 20px;
-      width: calc(120px + (200 - 120) * ((100vw - 200px) / (350 - 200)));
       font-size: calc(12px + (16 - 12) * ((100vw - 200px) / (350 - 200)));
     }
     @media screen and (min-width: $break--mbl--sm){
       margin-bottom: 20px;
-      width: 200px;
       font-size: 16px;
     }
     @media screen and (min-width: $break--tblt) {
-      width: calc(300px + (500 - 300) * ((100vw - 768px) / (2000 - 768)));
       font-size: calc(24px + (36 - 24) * ((100vw - 768px) / (2000 - 768)));
     }
 
     @media screen and (max-height: $break--height--short) {
       margin-top: clamp(6px, 1.8vh, 15px);
       margin-bottom: clamp(6px, 1.8vh, 15px);
-      width: clamp(100px, 28vw, 200px);
       font-size: clamp(10px, 2.8vh, 16px);
       padding: clamp(8px, 2vh, 13px);
     }
@@ -42,7 +37,6 @@
     @media screen and (max-height: $break--height--xs) {
       margin-top: clamp(4px, 1.4vh, 10px);
       margin-bottom: clamp(4px, 1.4vh, 10px);
-      width: clamp(90px, 26vw, 160px);
       font-size: clamp(9px, 2.4vh, 14px);
       padding: clamp(6px, 1.6vh, 10px);
     }
@@ -58,6 +52,9 @@
       border: 5px solid $blue;
       @media screen and (min-width: $break--tblt) {
         border: 6px solid $blue;
+      }
+      @media screen and (max-height: $break--height--short) {
+        border-width: 3px;
       }
     }
     

@@ -10,9 +10,10 @@
           <span>KRISTINA</span>
           <span class="space_x1">DIAMOND</span>
         </h1>
-        <p>front end web developer <br> specializing in shopify</p>
+        <p>front end web developer</p>
       </header>
-      <section>
+      <section class="home__cta">
+        <p>specializing in shopify</p>
         <button class="blob-btn" @click="$emit('open-portfolio')">
           PROJECTS
           <span class="blob-btn__inner">
@@ -49,12 +50,5 @@ export default {
   data() {
       return {};
     },
-  mounted() {
-      this.updateWindowSize();
-      window.addEventListener("resize", this.updateWindowSize);
-  },
-  methods: {
-    updateWindowSize() {},
-  },
 }
 </script>
