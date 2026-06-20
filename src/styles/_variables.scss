@@ -33,3 +33,23 @@ $break--max: 2000px;
 // Short viewport heights (landscape mobile, resized desktop windows)
 $break--height--short: 500px;
 $break--height--xs: 380px;
+
+// Narrow + short: mobile landscape (~667×375) — shrink to fit
+@mixin media-narrow-short {
+  @media screen and (max-width: ($break--tblt - 1px)) and (max-height: $break--height--short) {
+    @content;
+  }
+}
+
+@mixin media-narrow-xs {
+  @media screen and (max-width: ($break--tblt - 1px)) and (max-height: $break--height--xs) {
+    @content;
+  }
+}
+
+// Wide + short: squashed desktop / banner aspect — keep desktop-scale sizing
+@mixin media-wide-short {
+  @media screen and (min-width: $break--tblt) and (max-height: $break--height--short) {
+    @content;
+  }
+}

@@ -71,7 +71,7 @@
     }
   }
 
-  @media screen and (max-height: $break--height--short) {
+  @include media-narrow-short {
     h1 {
       font-size: clamp(16px, 5.5vh, 30px);
 
@@ -86,7 +86,7 @@
     }
   }
 
-  @media screen and (max-height: $break--height--xs) {
+  @include media-narrow-xs {
     h1 {
       font-size: clamp(14px, 4.8vh, 22px);
     }
@@ -98,14 +98,14 @@
   }
 }
 
-@media screen and (max-height: $break--height--short) {
+@include media-narrow-short {
   .home-shell__content {
     padding-top: clamp(28px, 9vh, 58px);
     padding-bottom: clamp(4px, 1.5vh, 12px);
   }
 }
 
-@media screen and (max-height: $break--height--xs) {
+@include media-narrow-xs {
   .home-shell__content {
     padding-top: clamp(22px, 8vh, 40px);
     padding-bottom: clamp(2px, 1vh, 8px);
