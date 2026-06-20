@@ -91,6 +91,15 @@ button {
     &--white {
         background-color: white;
     }
+    &--blue {
+        background-color: $blue;
+    }
+}
+
+.color {
+    &--white {
+        color: white;
+    }
 }
 
 // -------------------------------------- SPACING -------------------------------------- //
@@ -249,6 +258,12 @@ button {
     }
 }
 
+.width {
+    &--full {
+        width: 100%
+    }
+}
+
 .float {
     &--right {
         float: right;
@@ -278,6 +293,12 @@ a:visited, a:-webkit-any-link {
 .overflow {
     &--hidden {
         overflow: hidden;
+    }
+    &--x {
+        overflow-x: scroll;
+    }
+    &--unset {
+        overflow: unset;
     }
     &--x {
         overflow-x: scroll;
