@@ -3,7 +3,7 @@
     id="Marquee"
     ref="container"
     class="marquee width--full bg--blue color--white"
-    @click="copyToClipboard('krdiamond@gmail.com')"
+    @click.stop="handleClick"
   >
     <div
       class="marquee__track"
@@ -41,6 +41,7 @@ const SCROLL_SPEED_PX_PER_SEC = 13.556;
 
 export default {
   name: 'Marquee',
+  inject: ['getConfetti'],
   data() {
     return {
       repeatCount: 2,
@@ -94,6 +95,10 @@ export default {
     }
   },
   methods: {
+    handleClick(event) {
+      this.copyToClipboard('krdiamond@gmail.com');
+      this.getConfetti()?.spawnCopied(event);
+    },
     copyToClipboard(text) {
       navigator.clipboard.writeText(text);
     },

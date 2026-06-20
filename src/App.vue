@@ -1,8 +1,13 @@
 <template>
 
   <div class="main-border position--fixed">
-    <ConfettiContainer 
-    :height="windowHeight" :width="windowWidth" class="position--relative pointer-events--none" :class="{ 'z-index--2': projects }"/>
+    <ConfettiContainer
+      ref="confettiContainer"
+      :height="windowHeight"
+      :width="windowWidth"
+      class="position--relative pointer-events--none"
+      :class="{ 'z-index--2': projects }"
+    />
     <Home 
       @open-portfolio="openPortfolio()" 
       @open-email="openEmail()" 
@@ -32,6 +37,11 @@ export default {
     Home,
     Portfolio, Email,
     ConfettiContainer,
+  },
+  provide() {
+    return {
+      getConfetti: () => this.$refs.confettiContainer,
+    };
   },
   data() {
       return {
