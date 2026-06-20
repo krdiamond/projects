@@ -35,7 +35,9 @@ export default {
     eyes() {
       const eyes = [this.$refs.leftEye, this.$refs.rightEye];
       const pupils = this.$el.querySelectorAll(".js-pupil");
-      const maxPupilDistanceFromCenter = 45;
+      // Pupil is 45% of eye diameter (see eyes.scss); keep entire circle inside eye.
+      const pupilSizePercent = 45;
+      const maxPupilDistanceFromCenter = 50 - pupilSizePercent / 2;
 
       let lastEvent = {
         clientX: window.innerWidth / 2,
