@@ -40,6 +40,20 @@
       font-size: clamp(9px, 2.4vh, 14px);
       padding: clamp(6px, 1.6vh, 10px);
     }
+
+    @include media-wide-short {
+      margin-top: clamp(7px, 1.8vh, 15px);
+      margin-bottom: clamp(7px, 1.8vh, 15px);
+      font-size: clamp(11px, 3vh, 24px);
+      padding: clamp(8px, 2vh, 13px);
+    }
+
+    @include media-wide-xs {
+      margin-top: clamp(5px, 1.5vh, 12px);
+      margin-bottom: clamp(5px, 1.5vh, 12px);
+      font-size: clamp(10px, 2.6vh, 20px);
+      padding: clamp(7px, 1.7vh, 11px);
+    }
     
     &:before {
       content: "";
@@ -55,6 +69,14 @@
       }
       @include media-narrow-short {
         border-width: 3px;
+      }
+
+      @include media-wide-short {
+        border-width: clamp(3px, 0.65vh, 6px);
+      }
+
+      @include media-wide-xs {
+        border-width: clamp(3px, 0.55vh, 5px);
       }
     }
     

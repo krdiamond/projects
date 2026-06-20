@@ -96,6 +96,36 @@
       padding-top: clamp(2px, 0.8vh, 4px);
     }
   }
+
+  @include media-wide-short {
+    h1 {
+      font-size: clamp(20px, 7.5vh, 60px);
+
+      span {
+        padding-left: clamp(8px, 1.8vh, 25px);
+      }
+    }
+
+    p {
+      font-size: clamp(10px, 3vh, 30px);
+      padding-top: clamp(3px, 0.9vh, 6px);
+    }
+  }
+
+  @include media-wide-xs {
+    h1 {
+      font-size: clamp(18px, 6.5vh, 48px);
+
+      span {
+        padding-left: clamp(6px, 1.5vh, 20px);
+      }
+    }
+
+    p {
+      font-size: clamp(9px, 2.6vh, 24px);
+      padding-top: clamp(2px, 0.7vh, 4px);
+    }
+  }
 }
 
 @include media-narrow-short {
@@ -108,6 +138,20 @@
 @include media-narrow-xs {
   .home-shell__content {
     padding-top: clamp(22px, 8vh, 40px);
+    padding-bottom: clamp(2px, 1vh, 8px);
+  }
+}
+
+@include media-wide-short {
+  .home-shell__content {
+    padding-top: clamp(44px, 15vh, 110px);
+    padding-bottom: clamp(4px, 1.2vh, 12px);
+  }
+}
+
+@include media-wide-xs {
+  .home-shell__content {
+    padding-top: clamp(38px, 13vh, 90px);
     padding-bottom: clamp(2px, 1vh, 8px);
   }
 }

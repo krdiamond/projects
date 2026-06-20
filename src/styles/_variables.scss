@@ -47,9 +47,15 @@ $break--height--xs: 380px;
   }
 }
 
-// Wide + short: squashed desktop / banner aspect — keep desktop-scale sizing
+// Wide + short: squashed desktop / banner aspect — vh-scaled, slightly larger than narrow-short
 @mixin media-wide-short {
   @media screen and (min-width: $break--tblt) and (max-height: $break--height--short) {
+    @content;
+  }
+}
+
+@mixin media-wide-xs {
+  @media screen and (min-width: $break--tblt) and (max-height: $break--height--xs) {
     @content;
   }
 }

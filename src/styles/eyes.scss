@@ -28,11 +28,15 @@
   }
 
   @include media-wide-short {
-    top: clamp(
-      -150px,
-      calc(-110px + (-150 - -110) * ((100vw - 768px) / (2000 - 768))),
-      -16vh
-    );
+    right: clamp(20px, 3vw, 30px);
+    top: clamp(-110px, -20vh, -42px);
+    --eye-size: clamp(34px, 9.5vh, 80px);
+  }
+
+  @include media-wide-xs {
+    right: clamp(16px, 2.5vw, 24px);
+    top: clamp(-72px, -17vh, -36px);
+    --eye-size: clamp(30px, 8vh, 60px);
   }
 
   .eye {
@@ -57,6 +61,16 @@
     @include media-narrow-xs {
       border-width: clamp(2px, 0.5vh, 3px);
     }
+
+    @include media-wide-short {
+      border-width: clamp(3px, 0.7vh, 6px);
+      margin-top: clamp(0px, 1.8vh, 20px);
+    }
+
+    @include media-wide-xs {
+      border-width: clamp(2px, 0.6vh, 5px);
+      margin-top: 0;
+    }
   }
 
   .blink {
@@ -72,6 +86,14 @@
 
     @include media-narrow-xs {
       margin-top: clamp(6px, 2vh, 10px);
+    }
+
+    @include media-wide-short {
+      margin-top: clamp(10px, 2.8vh, 50px);
+    }
+
+    @include media-wide-xs {
+      margin-top: clamp(8px, 2.2vh, 30px);
     }
   }
 
